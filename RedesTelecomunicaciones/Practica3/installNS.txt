@@ -1,0 +1,116 @@
+*************************************
+* Guía breve de instalación de NS-2 *
+* "piece by piece"                  *
+*************************************
+
+Agregaré un vídeo explicando el procedimiento para usar NS2 sin modificar su
+sistema operativo. Entre tanto, las siguientes instrucciones de base le
+serán útiles:
+
+- Contar con una memoria USB de al menos 4 GB
+- Usar dicha memoria y hacerla arrancable con alguna versión de Ubuntu 16.04
+  o derivada de Ubuntu. Sugeriría Xubuntu 16.04 o Lubuntu 16.04. En Windows,
+  descargue el archivo .iso correspondiente y use Rufus para crear la 
+  memoria arrancable, elija GPT en lugar de MBR. 
+  
+  En la Mac, vaya a https://itsfoss.com/create-bootable-ubuntu-usb-drive-mac-os/
+  para aprender a crear una memoria USB arrancable que contenga Linux.
+  
+- Arranque su PC desde la partición UEFI de su memoria USB.
+- Elija "Try Xubuntu without installing" (o Lubuntu, si corresponde)
+- Una vez en Linux, conectarse a Internet.
+- Reemplace la distribución del teclado por la que le corresponda. Si su
+  teclado está en español, las opciones son "Spanish" o "Spanish (Latin
+  America)"
+- Abra una terminal y actualice Linux con los siguientes comandos:
+
+  sudo apt-get update
+  sudo apt-get dist-upgrade
+  
+- Luego, ejecutar:
+
+  sudo apt-get install build-essential libx11-dev xorg-dev
+  
+- Del sitio https://zlib.net/ descargar zlib-1.2.11.tar.gz
+
+- Ir al sitio https://www.isi.edu/nsnam/ns/ y descargar
+  
+           tcl8.5.19-src.tar.gz    tk8.5.19-src.tar.gz
+           otcl-src-1.14.tar.gz  tclcl-src-1.20.tar.gz
+           ns-src-2.35.tar.gz    nam-src-1.15.tar.gz
+           
+    Para descargar los archivos de TCL y TK, vaya a 
+    ftp://ftp.tcl.tk/pub/tcl/tcl8_5/
+                 
+- Suponiendo que todos los archivos .tar.gz se encuentran en el directorio
+  $HOME/Downloads, descomprimirlos en el orden citado arriba
+
+- Compilación e instalación de zlib: 
+  $ cd $HOME/Downloads/zlib-1.2.11
+  $ ./configure --prefix=$HOME
+  $ make
+  $ make install
+  
+- Compilación de tcl:
+  $ cd $HOME/Descargas/tcl8.5.19/unix
+  $ ./configure --prefix=$HOME
+  $ make
+  $ make install
+  
+- Compilación de tk
+  $ cd $HOME/Descargas/tk8.5.19/unix
+  $ ./configure --prefix=$HOME
+  $ make
+  $ make install
+  
+- Compilación de otcl
+  $ cd $HOME/Descargas/otcl-1.14
+  $ ./configure --prefix=$HOME --with-tcl=$HOME/Downloads/tcl8.5.19 --with-tcl-ver=8.5.19
+  
+  Aquí, editar el archivo Makefile y en la sección INCLUDES reemplazar el duplicado
+  de -I/home/_SU_DIRECTORIO_/Downloads/tcl8.5.19/generic por 
+  -I/home/_SU_DIRECTORIO_/Downloads/tcl8.5.19/unix
+  
+  En donde _SU_DIRECTORIO_ debe reemplazarse por el nombre de su directorio de inicio.
+  
+  $ make
+  $ make install
+  
+- Compilación de tclcl
+  $ cd $HOME/Downloads/tclcl-1.20
+  $ ./configure --prefix=$HOME --with-tcl=$HOME/Downloads/tcl8.5.19 --with-tcl-ver=8.5.19 
+  $ make
+  $ make install
+  
+- Compilación de NS-2
+  $ cd $HOME/Descargas/ns-2.35
+  $ ./configure --prefix=$HOME --with-tcl=$HOME/Downloads/tcl8.5.19 --with-tcl-ver=8.5.19
+  $ make
+  
+  Encontrarán probablemente un error de compilación en el archivo linkstate/ls.h, corregirlo de
+  acuerdo al mensaje del compilador. Ejecutar nuevamente:
+  
+  $ make
+  $ make install
+  
+- Compilación de NAM:
+  $ cd $HOME/Downloads/nam-1.15
+  $ ./configure --prefix=$HOME --with-tcl=$HOME/Downloads/tcl8.5.15 --with-tcl-ver=8.5.19 \
+                --with-zlib=$HOME/Downloads/zlib-1.2.11
+  $ make
+  $ make install
+  
+- Actualizar las variables de ambiente PATH, LD_LIBRARY_PATH y MANPATH como sigue:
+
+  $ export PATH=$PATH:$HOME/bin
+  $ export LD_LIBRARY_PATH=$HOME/lib
+  $ export MANPATH=$MANPATH:$HOME/man
+  
+  
+  Los archivos de ejemplo de la Práctica 3 deberían guardarse con extensión .tcl
+  
+  Para ejecutar cualquier script de la práctica, abrir una terminal y ejecutar NS-2 recibiendo como
+  parámetro el nombre del archivo. Por ejemplo, si en la práctica guardó los scripts con nombres
+  p3_1.tcl, p3_2.tcl y p3_3.tcl entonces, ejecutar el primer script en una terminal como:
+  
+  $ ns p3_1.tcl

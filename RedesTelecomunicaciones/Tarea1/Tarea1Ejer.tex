@@ -1,0 +1,381 @@
+\documentclass[a4paper, 11pt]{article}
+% Esto es para poder escribir acentos directamente:
+\usepackage[latin1]{inputenc}
+% Esto es para que el Latex sepa que el texto está en español:
+\usepackage[spanish]{babel}
+
+\usepackage[latin1]{inputenc}
+
+%Paquetes de la AMS:
+\usepackage{amsmath, amsthm, amsfonts}
+
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{graphicx}
+
+\newtheorem{Teo}{Teorema}[section]
+\newtheorem{Cor}{Corolario}
+\newtheorem{Lem}{Lema}
+\newtheorem{Prop}{Proposición}
+\newtheorem{Def}{Definición}
+\theoremstyle{definition} \theoremstyle{remark}
+\newtheorem{Obs}{Observación}
+
+\title{Tarea 1 Redes de Telecomunicaciones}
+\author{Gonzalo Olvera Monroy}
+
+\date{}
+\begin{document}
+    \maketitle
+    \section{R1. ?`Cu\'al es la diferencia entre un host y un sistema final? Enumere varios tipos de diferentes de final sistemas. ?`Es un servidor web sistema final?}
+        No hay diferencia. A lo largo de este texto, las palabras "host" y "sistema final" son utilizado indistintamente. Los sistemas finales incluyen PC, estaciones de trabajo, servidores web, correo servidores, PDA, Internet-consolas de juegos conectadas, etc.
+
+    \section{R2. La palabra protocolo se utiliza a menudo para describir las relaciones diplom\'aticas. ?`C\'omo describe Wikipedia el protocolo diplom\'atico?}
+    El protocolo diplom\'atico se describe com\'unmente como un conjunto de normas internacionales de cortes\'ia. Estas normas bien establecidas y respetadas han facilitado que las naciones y las personas vivan y trabajen juntas. Parte del protocolo siempre ha sido el ack nowledgment de la posici\'on jer\'arquica de todos los presentes. Las normas del protocolo se basan en los principios del civismo.
+
+    \section{R3. ?`Por qu\'e son importantes los est\'andares para los protocolos?}
+    Los est\'andares son importantes para los protocolos para que las personas puedan crear sistemas de redes y productos que interoperan
+
+    \section{R4. Lista seis tecnolog\'ias de acceso. Clasifique cada una como acceso dom\'estico, acceso empresarial o acceso inal\'ambrico de \'area amplia.}
+    \begin{enumerate}
+      \item M\'odem de acceso telef\'onico por l\'inea telef\'onica: hogar.
+      \item DSL sobre la l\'inea telef\'onica: hogar o peque\~{n}a oficina.
+      \item Cable a HFC: inicio.
+      \item Ethernet conmutado de 100 Mbps: empresa.
+      \item Wifi (802.11): hogar y empresa.
+      \item 3G y 4G: inal\'ambrica de \'area amplia.
+    \end{enumerate}
+
+    \section{R7. ?`Cu\'al es la velocidad de transmisi\'on de LAN Ethernet?}
+    Las LAN Ethernet tienen velocidades de transmisi\'on de 10 Mbps, 100 Mbps, 1 Gbps y 10 Gbps.
+
+    \section{R8. ?`Cu\'ales son algunos de los medios f\'isicos sobre los que puede pasar Ethernet?}
+     Hoy en d\'ia, Ethernet se ejecuta con mayor frecuencia sobre el cable de cobre de par trenzado. Tambi\'en puede pasar por enlaces \'opticos de fibras.
+
+     \section{R11. Suponga que hay exactamente un conmutador entre una estac\'on trasmisora y una receptora.Las velocidades de transmisi\'on entre la estaci\'on trasmisora y el conmutador y entre el conmutador y el receptor son R1 Y R2, respectivamente. Suponiendo que el conmutador usa conmutaci\'on de paquetes \textit{store-and-forward}, ?`cu\'al es el retardo total de extremo a extremo para enviar un paquete de tama\~{n}o L? Ignore retardos en la fila de espera, retardo de propagaci\'on y retardo de procesamiento.}
+     \begin{equation}\label{A1}
+       d_{end-end}=(L/R_{1}) + (L/R_{2})
+     \end{equation}
+
+     \section{R12. ?`Qu\'e ventaja tiene una red de conmutaci\'on de circuitos sobre una red de conmutaci\'on de paquetes? ?`Qu\'e ventajas tiene TDM sobre FDM en una red de circuitos conmutados?}
+     Una red de circuitos conmutados puede garantizar una cierta cantidad de ancho de banda de extremo a extremo durante la duraci\'on de una llamada. La mayor\'ia de las redes de conmutaci\'on de paquetes en la actualidad (incluida Internet) no pueden ofrecer garant\'ias de extremo a extremo para el ancho de banda. FDM requiere un hardware anal\'ogico sofisticado para cambiar la se\`{n}al a las bandas de frecuencia adecuadas
+
+     \section{R13. Supongamos que los usuarios comparten un enlace de 2 Mbps. Tambi\'en supongamos que cada usuario transmite continuamente a 1 Mbps al transmitir, pero cada usuario transmite s\'olo el 20 por ciento del tiempo.}
+     \renewcommand{\theenumi}{\alph{enumi}}
+     \begin{enumerate}
+       \item Cuando se utiliza la conmutaci\'on de circuitos, ?`cu\'antos usuarios pueden recibir asistencia?
+       \item Para el resto de este problema, suponga que se utiliza la conmutaci\'on de paquetes. ?`Por qu\'e no habr\'a esencialmente ning\'un retraso en la cola antes del enlace si dos o menos usuarios transmiten al mismo tiempo? ?`Por qu\'e habr\'a un retraso en la cola si tres usuarios transmiten al mismo tiempo?
+       \item Encuentre la probabilidad de que un usuario determinado est\'e transmitiendo.
+       \item Supongamos que ahora hay tres usuarios. Encuentre la probabilidad de que en cualquier momento dado, los tres usuarios est\'an transmitiendo simult\'aneamente. Encuentre la fracci\'on de tiempo durante la cual la cola crece.
+     \end{enumerate}
+     \textbf{Respuestas:}
+     \renewcommand{\theenumi}{\alph{enumi}}
+     \begin{enumerate}
+       \item Se pueden admitir 2 usuarios porque cada usuario requiere la mitad del ancho de banda del enlace.
+       \item Dado que cada usuario requiere 1Mbps al transmitir, si dos o menos usuarios transmiten simult\'aneamente, se requerir\'a un m\'aximo de 2Mbps. Dado que el ancho de banda disponible del enlace compartido es de 2Mbps, no habr\'a ningún retraso en la cola antes del enlace. Mientras que, si tres usuarios transmiten simult\'aneamente, el ancho de banda requerido ser\'a de 3Mbps que es m\'as que el ancho de banda disponible del enlace compartido. En este caso, habr\'a un retraso en la cola antes del enlace.
+       \item Probabilidad de que un usuario determinado est\'e transmitiendo = 0.2
+       \item Probabilidad de que los tres usuarios est\'en transmitiendo simult\'aneamente= $\frac{3}{3}p^3(1-p)^{3-3} = 0.2^3=0.008$. Dado que la cola crece cuando todos los usuarios est\'an transmitiendo, la fracci\'on de tiempo durante la cual la cola crece (que es igual a la probabilidad de que los tres usuarios est\'an transmitiendo simult\'aneamente) es 0.008.
+     \end{enumerate}
+
+     \section{R14. ?`Por qu\'e dos ISPs en el mismo nivel de la jerarqu\'ia a menudo se emparejan entre s\'i? ?`C\'omo gana dinero un IXP?}
+     Si los dos ISP no se emparejan entre s\'i, cuando se env\'ian tr\'afico entre s\'i, tienen que enviar el tr\'afico a trav\'es de un proveedor ISP (intermediario), al que tienen que pagar por transportar el tr\'afico. Al interconectarse directamente, los dos ISP pueden reducir sus pagos a los ISP de sus proveedores. Un Internet Exchange Points (IXP) (normalmente en un edificio independiente con sus propios conmutadores) es un punto de encuentro donde varios ISP pueden conectarse y/o trabajar juntos. Un ISP gana su dinero cobrando a cada uno de los ISP que se conectan al IXP una tarifa relativamente peque\~{n}a, que puede depender de la cantidad de tr\'afico enviado o recibido desde el IXP.
+
+     \section{R15. Algunos proveedores de contenido han creado sus propias redes. Describa la red de Google. ?`Qu\'e motiva a los proveedores de contenido a crear estas redes?}
+     La red privada de Google conecta todos sus centros de datos, grandes y peque\~{n}os. El tr\'afico entre los centros de datos de Google pasa a trav\'es de su red privada en lugar de a trav\'es de Internet p\'ublica. Muchos de estos centros de datos est\'an ubicados en, o cerca, ISP de nivel inferior. Por lo tanto, cuando Google entrega contenido a un usuario, a menudo puede pasar por alto los ISP de nivel superior. ?`Qu\'e motiva a los proveedores de contenido para crear estas redes? En primer lugar, el proveedor de contenido tiene m\'as control sobre la experiencia del usuario, ya que tiene que utilizar pocos ISP intermediarios. En segundo lugar, puede ahorrar dinero enviando menos tr\'afico a las redes de proveedores. Tercero, si los ISPs deciden cobrar m\'as dinero a proveedores de contenido altamente rentables (en pa\'ises donde no se aplica la neutralidad de la red), los proveedores de contenido pueden evitar estos pagos adicionales.
+
+     \section{R16. Considere el env\'io de un paquete desde una fuente hasta un destino sobre una rutafija. Enliste los componentes de retardo en el retardo de extremo a extremo. ?`Cu\'al de esos retardos son constantes y cu\'ales son variables?}
+     El retardo de extremo a extremo ($d_{end-to-end}$) se compone del retardo de procesamiento($d_{proc}$),retardo en la fila de espera($d_{queue}$),retardo de transmisi\'on($d_{trans}$) y retardo de propagaci\'on($d_{prop}$). Cada nodo en el camino entre fuente y destino agregar\'a esas cuatro componentes de retardo,de tal suerte que $d_{end-to-end}$ comprender\'a la suma de esos retardos tantas veces como ruteadores/conmutadores haya en el camino. El \'unico retardo variables es $d_{queue}$ debido a que la ocupaci\'on en la fila de espera es din\'amica.
+
+     \section{R17. Visite el applet de retardo de transmisi\'on versus propagaci\'on en el sitio Web adjunto. Entre las tasas, retardo de propagaci\'on y tama\~{n}os de paquetes disponibles, encuentre una combinaci\'on para la que el remitente termine de transmitir antes de que el primer bit del paquete llegue al receptor. Encuentre otra combinaci\'on para la cual el primer bit del paquete llega al receptor antes de que el remitente termine de transmitir. }
+     \textbf{Respuestas:}
+     \begin{enumerate}
+       \item 1000 km, 1 Mbps, 100 bytes
+       \item 100 km, 1 Mbps, 100 bytes
+     \end{enumerate}
+
+     \section{R18. ?`Cu\'anto le toma a un paquete de 1000 bytes propagarse sobre un enlace de 2500km, velocidad de propagaci\'on de $2.5x10^8m/s$ y velocidad de transmisi\'on de $2 Mb/s$? De forma m\'as general, ?`cu\'anto le toma a un paquete propagarse sobre un enlace de longitud d, velocidad de propagaci\'on $s$ y tasa de transmisi\'on $Rb/s$?}
+     \begin{equation}\label{A2}
+        d_{drop} = (2.5x10^8 m/s) = 10^{-2} s = 10ms
+     \end{equation}
+     \begin{equation}\label{A3}
+        d_{drop} = d/s
+     \end{equation}
+     \begin{center}
+       No, como se observa en la expresi\'on anterior.\\
+       Misma respuesta
+     \end{center}
+
+     \section{R19. Supongamos que el Host A quiere enviar un archivo grande al Host B. La ruta de Host A al Host B tiene tres enlaces, de tarifas $R_{1}=500 kbps, R_{2}=2 Mbps$, and $R_{3}=1 Mbps$}
+     \begin{enumerate}
+       \item Asumiendo que no hay otro tr\'afico en la red, ?`cu\'al es el rendimiento para la transferencia de archivos?
+       \item Supongamos que el archivo es de 4 millones de bytes. Dividiendo el tama\~{n}o del archivo por el rendimiento, aproximadamente cuánto tiempo tomar\'a transferir el archivo al Host B?
+       \item Repetir (a) y (b), pero ahora con R reducido a 100 kbps.
+     \end{enumerate}
+     \textbf{Respuestas:}
+     \begin{enumerate}
+       \item 500 kbps
+       \item 64 segundos
+       \item 100 kbps; 320 segundos
+     \end{enumerate}
+
+     \section{R22. Enliste cinco tareas que una capa puede realizar. ?`Es posible que una (o m\'as) de esas tareas puedan realizarse por dos (o m\'as) capas? }
+     Control de errores, control de flujo, control de congesti\'on, entrega confiable, entrega ordenada. \\
+     S\'i, ya que la capa de transporte y la capa de enlace de datos implentan el control de errores, control de flujo, entrega confiable y entrega ordenada en distinsto niveles del modelo TCP/IP.
+
+     \section{R23. ?`Cu\'ales son las cinco capas de la pila de protocolos de Internet? ?`Cu\'ales son sus principales responsabilidades?}
+     \begin{enumerate}
+       \item \textbf{F\'isica:} Transmite en forma de bits o se\~{n}ales anal\'ogicas las tramas recibidas del nivel de enlace de datos
+       \item \textbf{Enlace de datos:} Recibe los datagramas del nivel de red para convertirlos en tramas, que hace pasar entre nodos. Una de sus funciones m\'as importantes es el control de errores y la resoluci\'on de acceso al medio.
+       \item \textbf{Red:} Transmite los segmentos que recibe de la capa de transporte, conocidos como \textit{datagramas}. \\
+           Esto lo hace de nodo a nodo, es decir, de ruteador a ruteador. Ofrece encaminamiento, reexpedici\'on y direccionamiento, entre otras funciones.
+       \item \textbf{Transporte:} Transporta hacia el otro extremo los mensajes provenientes de la capa de aplicaci\'on.\\
+           Ofrece control de errores, control de flujo, control de congesti\'on, entre otras funciones.
+       \item \textbf{Aplicaci\'on:} Aqu\'i residen las aplicaciones de red que se ofrecen al usuario. Esta capa genera los mensajes que son enviados a trav\'es de la capa de transporte.
+     \end{enumerate}
+
+     \section{R24. ?`Qu\'e es un mensaje de capa de aplicaci\'on? ?`Un segmento de capa transporte? ?`Un datagrama de capa de red? ?`Un trama de enlace de datos?}
+     Una aplicaci\'on divide en paquetes la informaci\'on que va a transmitir hacia el otro extremo. Cada paquete recibe el nombre de \textbf{mensaje} en este nivel de comunicaciones. Este mensaje es pasado a su vez hacia los niveles inferiores, de tal manera que el mensaje lo recibe la capa de transporte y le a\~{n}ade un encabezado. Al paquete resultante, se le llama \textbf{segmento}. Dicho segmento, se hace pasar a la capa de red, la cual a su vez agrega su propio encabezado. El paquete resultante se llama \textbf{datagrama}. Finalmente, el datagrama se hace pasar al nivel de enlace de datos, el cual realiza la operaci\'on an\'aloga a\~{n}adiendo su propio encabezado. El paquete resultante recibe el nombre de \textbf{trama(frame)}
+
+     \section{R25. ?`Cu\'ales capas de la pila de protocolos de internet procesa un ruteador? ?`Cu\'ales capas procesa un conmutador de enlace de datos? ?`Cu\'ales procesa una estaci\'on?}
+     \begin{flushleft}
+       \textbf{Ruteador:}Capas de 1 a 3; i.e., F\'isica, enlace de datos y red.\\
+       \textbf{Conmutador:} Capas de 1 y 2; i.e., F\'isica y enlace de datos.\\
+       \textbf{Estaci\'on:} Capas de 1 a 5;i.e., F\'isica, Enlace de Datos, Red, Transporte y Aplicaci\'on. S\'olo los extremos implementan las cinco capas del modelo TCP/IP.
+     \end{flushleft}
+
+
+
+     \maketitle
+     \section{P2. $d_{end-to-end}=NLR$ Da una f\'ormula para el retraso de extremo a extremo de enviar un paquete de longitud L a trav\'es de N enlaces de velocidad de transmisi\'on R. Generalice esta f\'ormula para enviar P tales paquetes consecutivos sobre los enlaces N.}
+
+     En el momento $N * (L / R)$, el primer paquete ha llegado al destino, el segundo paquete se almacena en el \'ultimo enrutador, el tercer paquete se almacena en el siguiente al \'ultimo enrutador, etc. En el momento $N * (L / R) + L / R$, el segundo paquete ha llegado al destino, el tercer paquete se almacena en el \'ultimo enrutador, etc. Siguiendo con esta l\'ogica, vemos que en el tiempo $N * (L / R) + (P-1) * (L / R) = (N + P - 1) * (L / R)$ todos los paquetes han llegado al destino.
+
+     \section{P5. Revise la analog\'ia coche-caravana en la Secci\'on 1.4 . Supongamos una velocidad de propagaci\'on de 100 km/hora.}
+     \renewcommand{\theenumi}{\alph{enumi}}
+     \begin{enumerate}
+       \item Suponga que la caravana viaja 150 km, comenzando frente a una caseta de peaje, pasando por una segunda cabina de peaje y terminando justo despu\'es de una tercera cabina de peaje. ?`Qu\'e es el retraso de un extremo a otro?
+       \item Repita (a), ahora asumiendo que hay ocho autos en la caravana en lugar de diez.
+     \end{enumerate}
+     Respuestas:
+     Las casetas de peaje est\'an a 75 km de distancia, y los coches se propagan a 100 km/h. Una cabina de peaje da servicio a un coche a una velocidad de un coche cada 12 segundos.
+     \renewcommand{\theenumi}{\alph{enumi}}
+     \begin{enumerate}
+       \item Hay diez coches. Tarda 120 segundos, o 2 minutos, para que la primera cabina de peaje d\'e servicio a los 10 autos. Cada uno de estos coches tiene un retardo de propagaci\'on de 45 minutos.(viaje 75 km) antes de llegar al segundo peaje. As\'i, todos los coches se alinean antes del segundo peaje despu\'es de 47 minutos. Todo el proceso se repite para viajar entre el segundo y el tercer peaje. El tercer peaje tambi\'en tarda 2 minutos en dar servicio a los 10 coches. Por lo tanto, el retraso total es 96 minutos.
+       \item La demora entre las cabinas de peaje es de 8 * 12 segundos m\'as 45 minutos, es decir, 46 minutos y 36 segundos. La demora total es el doble de esta cantidad m\'as 8 * 12 segundos, es decir, 94 minutos y 48 segundos.
+     \end{enumerate}
+     \section{P6. Este problema elemental comienza a explorar el retardo de propagaci\'on y el retardo de transmisi\'on, dos conceptos centrales en la red de datos. Considere dos hosts, A y B, conectados por un solo enlace de tasa R bps. Supongamos que los dos hosts est\'an separados por m metros, y supongamos que la velocidad de propagaci\'on a lo largo del enlace es s metros/seg. Host A es enviar un paquete de bits de tama\~{n}o L al Host B.}
+      \renewcommand{\theenumi}{\alph{enumi}}
+      \begin{enumerate}
+        \item Exprese el retardo de propagaci\'on, $d_{prop}$, en t\'erminos de $m$ y $s$.
+        \item Determine el tiempo de transmisi\'on del paquete, $d_{trans}$, en t\'erminos de L y R.
+        \item Ignorando los retrasos en el procesamiento y la cola, obtenga una expresi\'on para el retraso de un extremo a otro.
+        \item Supongamos que el Host A comienza a transmitir el paquete a tiempo.En el tiempo $d_{trans}$ , ?`d\'onde está el \'ultimo bit del paquete?
+        \item Supongamos que $d_{prop}$ es mayor que $d_{trans}$.En el momento $t =d_{trans}$, ?`d\'onde est\'a el primer bit del paquete?
+        \item Supongamos que $d_{prop}$ es menor que $d_{trans}$.En el momento $t =d_{trans}$, ?`d\'onde est\'a el primer bit del paquete?
+        \item Supongamos $s=2.5x10^8$, $L=120 bits$, and $R=56kbps$. Encuentra la distancia m de modo que $d_{prop}$ sea igual a $d_{trans}$.
+      \end{enumerate}
+      Respuestas:
+      \renewcommand{\theenumi}{\alph{enumi}}
+      \begin{enumerate}
+        \item $d_{prop} = m/s seconds$
+        \item $d_{trans} = L/R seconds$
+        \item $d_{end-to-end} = (m/s + L/R) seconds$
+        \item El bit est\'a dejando al Host A.
+        \item El primer bit est\'a en el enlace y no ha llegado al Host B.
+        \item El primer bit ha llegado al Host B.
+        \item Querer $m=\frac{L}{M}s = \frac{120}{56x10^3}(2.5x10^8) = 536km$
+      \end{enumerate}
+
+     \section{P10. Considere un paquete de longitud L que comienza en el sistema final A y viaja a trav\'es de tres enlaces a un sistema final de destino. Estos tres enlaces est\'an conectados por dos conmutadores de paquetes. Dejar $d_{i}, s_{i} y R_{i}$ denotar la longitud, la velocidad de propagaci\'on y la tasa de transmisi\'on del enlace i, para $i=1,2,3$. El conmutador de paquetes retrasa cada paquete por $d_{proc}$ . Asumiendo que no hay retrasos en la cola, en t\'erminos de $d_{i},s_{i},R_{i}, (i=1,2,3), y L$ ?`cu\'al es el retraso total de extremo a extremo para el paquete? Supongamos que ahora el paquete es de $1.500 bytes$, la velocidad de propagaci\'on en los tres enlaces es $2.5x10^8 m/s$ las velocidades de transmisi\'on de los tres enlaces son de 2 Mbps, el retardo de procesamiento del conmutador de paquetes es de 3 msec, la longitud del primer enlace es de $5.000 km$, la longitud del segundo enlace es de $4.000 km$ y la longitud del \'ultimo enlace es de $1.000$ km.Para estos valores, ?`cu\'al es el retardo de extremo a extremo? }
+     El primer sistema final requiere $L/R_{1}$ para transmitir el paquete en el primer enlace; el paquete se propaga sobre el primer enlace en $d_{1}/s_{1}$; el conmutador de paquetes a\~{n}ade un retardo de procesamiento de $d_{proc}$ ; despu\'es de recibir el paquete completo, el conmutador de paquetes que conecta el primer y el segundo enlace requiere $L/R_{2}$ para transmitir el paquete al segundo enlace; el paquete se propaga sobre el segundo enlace en $d_{2}/s_{2}$ . Del mismo modo, podemos encontrar el retraso causado por el segundo interruptor y el tercer enlace: $L/R_{3}$ , $d_{proc}$ , y $d_{3}/s_{3}$ . A\~{n}adiendo estos cinco retrasos da:\\
+     $d_{end-end} = L/R_{1} + L/R_{2} + L/R_{3} + d_{1}/s_{1} + d_{2}/s_{2} + d_{3}/s_{3} + d_{proc} + d_{proc}$
+
+     \section{P11. En el problema anterior, supongamos $R_{1}=R_{2}=R_{3}=R y d_{proc}=0$.Adem\'as, supongamos que el conmutador de paquetes no almacena y reenv\'ia paquetes, sino que transmite inmediatamente cada bit que recibe antes de esperar a que llegue el paquete completo. ?`Cu\'al es el retraso extremo a extremo?}
+     Debido a que los bits se transmiten inmediatamente, el conmutador de paquetes no introduce ning\'un retraso; en particular, no produce un retraso de transmisi\'on. Por lo tanto:\\
+     $d_{end-end} = L/R + d_{1}/s_{1}+ d_{2}/s_{2}+d_{3}/s_{3}$\\
+     Para los valores de t en el problema 10 , obtenemos 6 + 20 + 16 + 4 = 46 ms.
+
+     \renewcommand{\theenumi}{\alph{enumi}}
+     \section{P13.}
+     \begin{enumerate}
+       \item Supongamos que los paquetes N llegan simult\'aneamente a un enlace en el que actualmente no hay paquetes transmitidos o en cola. Cada paquete es de longitud L y el enlace tiene una velocidad de transmisi\'on R. ?`Cu\'al es el retardo promedio de cola para los paquetes N?
+       \item Ahora supongamos que N tales paquetes llegan al enlace cada segundo $LN/R$. ?`Cu\'al es el promedio de retardo de cola de un paquete?
+     \end{enumerate}
+     \textbf{Respuestas:}
+     \renewcommand{\theenumi}{\alph{enumi}}
+     \begin{enumerate}
+       \item El retardo de cola es 0 para el primer paquete transmitido, L/R para el segundo paquete transmitido, y en general,$(n-1)L/R$ para el $n^{th}$ paquete transmitido. Por lo tanto, el retraso promedio para los paquetes N es:\\
+           $(L/R+2L/R+......+(N-1)L/R)/N$\\
+           =$L/(RN)*(1+2+....+(N-1))$\\
+           =$L/(RN)*N(N-1)/2$\\
+           =$LN(N-1)/(2RN)$\\
+           =$(N-1)L/(2R)$\\
+           Tenemos en cuenta que se utuiliza el bien conocido:\\
+           $1+2+.......+N=N(N+1)/2$
+       \item Se necesita $LN/R$ segundos para transmitir los paquetes N. Por lo tanto, el b\'ufer est\'a vac\'io cuando llega un lote de paquetes N. Por lo tanto, el retraso promedio de un paquete en todos los lotes es el retraso promedio dentro de un lote, es decir, $( N - 1)L/2R$.
+     \end{enumerate}
+
+     \section{P20. Considere el ejemplo de rendimiento correspondiente a la Figura 1.20(b). Ahora suponga que hay pares M cliente-servidor en lugar de 10. Denote $R_{s}, R_{c}$ y $R$ para las velocidades de los enlaces de servidor, enlaces de cliente y enlace de red. Suponga que todos los dem\'as enlaces tienen una capacidad abundante y que no hay otro tr\'afico en la red adem\'as del tr\'afico generado por los M pares cliente-servidor. Obtenga una expresi\'on general para el rendimiento en t\'erminos de $R_{s}, R_{c}, R$ y $M$.}
+     $Rendimiento = min{R_{s}, R_{c}, R/M}$
+
+     \section{P24. Supongamos que desea entregar con urgencia 40 terabytes de datos de Boston a Los \'Angeles. Usted tiene disponible un enlace dedicado de 100 Mbps para la transferencia de datos. ?`Prefiere transmitir los datos a trav\'es de este enlace o utilizar FedEx durante la entrega de la noche? Explique.}
+     $40 terabytes = 40 * 10^{12} * 8 bits$. Entonces, si se usa el enlace dedicado, tomar\'a $40 * 10^12 * 8 / (100 *10^6 )$ = 3200000 segundos = 37 d\'ias. Pero con la entrega de FedEx durante la noche, puede garantizar que los datos llegan en un d\'ia, y debe costar menos de \$100.
+
+     \section{P25. Suponga que dos estaciones, $A$ y $B$ est\'an separadas 20,000 km y que est\'an conectadas por un enlace directo de $R = 2 {Mb/s}$. Suponga que la velocidad de propagaci\'on sobre el enlace es de $2.5x10^8 m/s$.}
+     \renewcommand{\theenumi}{\Alph{enumi}}
+     \begin{enumerate}
+       \item Calcule el producto retardo--ancho de banda, Rx$d_{prop}$
+       \item Considere que se env\'ia de 800,000 bits de $A$ a $B$. Suponga que el archivo se env\'ia continuamente como un mensaje muy grande.?`Cu\'al es el n\'umero m\'aximo de bits que habr\'a en el enlace en cualquier tiempo dado?
+       \item Ofrezca una interpretaci\'on del producto retardo--ancho de banda.
+       \item ?`Cu\'al es el ancho (en metros) de un bit en el enlace? ?`Es m\'as ancho que un campo de f\'utbol?
+       \item Derive una expresi\'on general para el ancho de un bit en t\'erminos de la velocidad de propagaci\'on $s$, la tasa de transmisi\'on $R$, y la longitud del enlace $m$.
+     \end{enumerate}
+     Respuestas:
+     \renewcommand{\theenumi}{\Alph{enumi}}
+     \begin{enumerate}
+       \item  $Rxd_{prop}$ = ($2x10^6b/s$)$[(20x10^6m)/(2.5x10^8m/s)]$ = \textbf{160,000 bits}
+       \item \textbf{160,000 bits}
+       \item El producto del retardo por el ancho de banda representa la capacidad de un enlace; es decir, el n\'umero m\'aximo de bits que caben en el mismo..
+       \item $W_{b}$ = $m/(Rxd_{prop})$ = 125 m, lo que es m\'as grande que un campo de f\'utbol
+       \item $W_{b}$ = $m/(Rxd_{prop})$ = $m/[Rx(m/s)]$.\\
+            $W_{b}$ = $s/R$
+     \end{enumerate}
+
+
+
+
+     \section{P26. Refiri\'endose al problema P25, supongamos que podemos modificar R. ?`Para qu\'e valor de R es el ancho de un bit tan largo como la longitud del enlace?}
+     $s/R=20000km$, entonces $R=s/20000km=2.5x10^8/(2*10^7) = 12.5bps$
+
+     \section{P27. Considere el problema P25 pero ahora con un enlace de Gbps.}
+     \renewcommand{\theenumi}{\alph{enumi}}
+     \begin{enumerate}
+       \item Calcular el producto de retardo del ancho de banda, $R*d_{prop}$
+       \item Considere enviar un archivo de 800,000 bits desde el Host A al Host B. Suponga que el archivo se env\'ia continuamente como un mensaje grande. ?`Cu\'al es el n\'umero m\'aximo de bits que habr\'a en el enlace en un momento dado?
+       \item ?`Cu\'al es el ancho (en metros) de un bit en el enlace?
+     \end{enumerate}
+     \textbf{Respuesta:}
+     \renewcommand{\theenumi}{\alph{enumi}}
+     \begin{enumerate}
+       \item 80,000,000 bits
+       \item 80,000,000 bits, esto se debe a que el n\'umero m\'aximo de bits que estar\'an en el enlace en un momento dado = min(producto de retardo de ancho de banda, tama\~{n}o del paquete) = 800.000 bits.
+       \item .25 metros
+     \end{enumerate}
+
+     \section{P28. Consulte nuevamente el problema P25.}
+     \renewcommand{\theenumi}{\alph{enumi}}
+     \begin{enumerate}
+       \item ?`Cu\'anto tiempo se tarda en enviar el archivo, asumiendo que se env\'ia continuamente?
+       \item Supongamos ahora que el archivo se divide en 20 paquetes y cada paquete contiene 40.000 bits. Suponga que el receptor reconoce cada paquete y que el tiempo de transmisi\'on de un paquete de confirmaci\'on es insignificante. Finalmente, suponga que el remitente no puede enviar un paquete hasta que se reconozca el anterior. ?`Cu\'anto tiempo se tarda en enviar el archivo?
+       \item Compare los resultados de (a) y (b).
+     \end{enumerate}
+     \textbf{Respuestas:}
+     \renewcommand{\theenumi}{\alph{enumi}}
+     \begin{enumerate}
+       \item $t_{trans}+t_{prop}=400ms+80ms= 480ms$
+       \item $20*(t_{trans}+2t_{prop})=20*(20ms+80ms) = 2s$
+       \item La divisi\'on de un archivo tarda m\'as en transmitirse porque cada paquete de datos y su correspondiente paquete de reconocimiento a\~{n}aden sus propios retrasos de propagaci\'on.
+     \end{enumerate}
+     \
+     \begin{center}
+       \vfill
+       \textbf{Tarea 2}
+     \end{center}
+
+     \setcounter{section}{0}
+     \section{R3. Para una sesi\'on de comunicaci\'on entre un par de procesos, cuyo proceso es el cliente y cual es el servidor?}
+     El proceso que inicia la comunicaci\'on es el cliente; el proceso que espera ser contactado es el servidor.
+
+     \section{R4. Para una aplicaci\'on de intercambio de archivos P2P, ?`est\'a de acuerdo con la afirmaci\'on, "No hay noci\'on de las partes cliente y servidor de una sesi\'on de comunicaci\'on"? ?`Por qu\'e o por qu\'e no?}
+     No. En un archivo P2P - aplicaci\'on para compartir, el par que est\'a recibiendo un archivo es t\'ipicamente el cliente y el peer que est\'a enviando el archivo es t\'ipicamente el servidor.
+
+     \section{R5. ?`Qu\'e informaci\'on es utilizada por un proceso que se ejecuta en un host para identificar un proceso que se ejecuta en otro anfitri\'on?}
+     La direcci\'on IP del host de destino y el n\'umero de puerto del socket en el proceso de destino.
+
+     \section{R6. Supongamos que desea hacer una transacci\'on desde un cliente remoto a un servidor lo m\'as r\'apido posible. ?`Utilizar\'ia UDP o TCP? ?`Por qu\'e?}
+     Usaría UDP. Con UDP, la transacci\'on se puede completar en un tiempo de ida y vuelta (RTT): el cliente env\'ia la solicitud de transacci\'on a un socket UDP y el servidor env\'ia la respuesta de vuelta al socket UDP del cliente. Con TCP, se necesitan un m\'inimo de dos RTT, uno para configurar la conexi\'on TCP y otro para que el cliente env\'ie la solicitud y el servidor env\'ie la respuesta.
+
+     \section{R7. Refiri\'endose a la Figura 2.4 , vemos que ninguna de las aplicaciones enumeradas en la Figura 2.4 requiere p\'erdida de datos y sincronizaci\'on. ?`Se puede concebir una aplicaci\'on que no requiere p\'erdida de datos y que tambi\'en es muy sensible al tiempo?}
+     Un ejemplo es el procesamiento de textos remoto, por ejemplo, con Google docs. Sin embargo, debido a que Google docs se ejecuta a trav\'es de Internet (utilizando TCP), las garant\'ias de tiempo no se proporcionan.
+
+     \section{R8. Enumere las cuatro clases amplias de servicios que un protocolo de transporte puede proporcionar. Para cada una de las clases de servicio, indique si UDP o TCP (o ambos) proporcionan dicho servicio.}
+     \begin{enumerate}
+       \item Transferencia de datos confiable TCP proporciona un byte confiable - flujo entre el cliente y el servidor, pero UDP no.
+       \item Una garant\'ia de que se mantendr\'a un determinado valor para el rendimiento. Ninguno
+       \item Una garant\'ia de que los datos se entregar\'an en un per\'iodo de tiempo espec\'ifico. Ninguno
+       \item Confidencialidad (mediante cifrado). Ninguno.
+     \end{enumerate}
+
+     \vfill
+     \begin{center}
+       \vfill
+       \textbf{Preguntas 2}
+     \end{center}
+
+     \section{P1. ?`Verdadero o falso?}
+     \renewcommand{\theenumi}{\alph{enumi}}
+     \textbf{\begin{enumerate}
+               \item Un usuario solicita una p\'agina web que consta de texto y tres im\'agenes. Para esta p\'agina, el cliente enviar\'a un mensaje de solicitud y recibir\'a cuatro mensajes de respuesta.
+               \item Dos p\'aginas web distintas (por ejemplo, www.mit.edu/research.html and www.mit.edu/students.html )
+               \item Con conexiones no persistentes entre el navegador y el servidor de origen, es posible que un solo segmento TCP lleve dos mensajes de solicitud HTTP distintos.
+               \item El encabezado Fecha: en el mensaje de respuesta HTTP indica cu\'ando se modific\'o por \'ultima vez el objeto de la respuesta.
+               \item Los mensajes de respuesta HTTP nunca tienen un cuerpo de mensaje vac\'io.
+             \end{enumerate}}
+     \textbf{Respuestas:}
+     \renewcommand{\theenumi}{\alph{enumi}}
+     \begin{enumerate}
+       \item Falso
+       \item Verdadero
+       \item Falso
+       \item Falso
+       \item Falso
+     \end{enumerate}
+
+     \section{P2. SMS, iMessage y WhatsApp son sistemas de mensajer\'ia en tiempo real para smartphones. Despu\'es de hacer algunas investigaciones en Internet, para cada uno de estos sistemas escriba un p\'arrafo sobre los protocolos que utilizan. Luego escriba un p\'arrafo explicando c\'omo difieren.}
+     SMS (Short Message Service) es una tecnolog\'ia que permite enviar y recibir mensajes de texto entre tel\'efonos m\'oviles a trav\'es de redes celulares. Un mensaje SMS puede contener datos de 140 bytes y admite idiomas a nivel internacional. El tama\'~{n}o m\'aximo de un mensaje puede ser 160 caracteres de 7 bits, 140 caracteres de 8 bits o 70 caracteres de 16 bits. Los SMS se realizan a trav\'es de la Parte de aplicaci\'on m\'ovil (MAP) del protocolo SS7, y el protocolo de mensajes cortos est\'a definido por 3GPP TS 23.040 y 3GPP TS 23.041. Adem\'as, MMS (Servicio de mensajer\'ia multimedia) ampl\'ia la capacidad de los mensajes de texto originales y admite el env\'io de fotos, mensajes de texto m\'as largos y otro contenido.\\
+     iMessage es un servicio de mensajer\'ia instant\'anea desarrollado por Apple. iMessage admite textos,fotos, audios o videos que enviamos a dispositivos iOS y Mac a trav\'es de la red de datos m\'oviles o WiFi. IMessage de Apple se basa en APN de protocolo binario patentado (Apple PushServicio de notificaciones).\\
+     WhatsApp Messenger es un servicio de mensajer\'ia instant\'anea que admite muchos m\'ovil plataformas como iOS, Android, tel\'efono m\'ovil y Blackberry. Los usuarios de WhatsApp pueden enviarse im\'agenes, textos, audios o videos ilimitados a trav\'es de la red de datos m\'oviles o Wifi. WhatsApp utiliza el protocolo XMPP (Extensible Messaging and Presence Protocol).\\
+     iMessage y WhatsApp son diferentes a los SMS porque usan un plan de datos para enviar mensajes y funcionan en redes TCP / IP, pero el uso de SMS el plan de mensajes de texto que compramos a nuestro proveedor de servicios inal\'ambricos. Adem\'as, iMessage y WhatsApp admiten el env\'io fotos, videos, archivos, etc., mientras que el SMS original solo puede enviar mensajes de texto. Finalmente, iMessage y WhatsApp pueden funcionar a trav\'es de WiFi, pero SMS no.
+
+     \section{P3. Considere un cliente HTTP que desea recuperar un documento Web en una URL dada. La direcci\'on IP del servidor HTTP es inicialmente desconocida. ?`Qu\'e protocolos de transporte y capa de aplicaci\'on adem\'as de HTTP son necesarios en este escenario?}
+     Protocolos de capa de aplicaci\'on: DNS y HTTP.\\
+     Protocolos de capa de transporte: UDP para DNS; TCP para HTTP.
+
+     \section{P4. Considere la siguiente cadena de caracteres ASCII que fueron capturados por Wireshark cuando el navegador envi\'o un mensaje GET HTTP (es decir, este es el contenido real de un mensaje GET HTTP). Los caracteres <cr><lf> son caracteres de retorno de carro y de alimentaci\'on de línea (es decir, la cadena de caracteres en cursiva <cr> en el texto de abajo representa el car\'acter de retorno de carro \'unico que estaba contenido en ese punto en el encabezado HTTP). Responda las siguientes preguntas, indicando en qu\'e parte del mensaje HTTP GET se encuentra la respuesta.}
+     \renewcommand{\theenumi}{\alph{enumi}}
+     \textbf{\begin{enumerate}
+       \item ?`Cu\'al es la URL del documento solicitado por el navegador?
+       \item ?`Qu\'e versi\'on de HTTP se est\'a ejecutando el navegador?
+       \item ?`El navegador solicita una conexi\'on no persistente o persistente?
+       \item ?`Cu\'al es la direcci\'on IP del host en el que se est\'a ejecutando el navegador?
+       \item ?`Qu\'e tipo de navegador inicia este mensaje? ?`Por qu\'e se necesita el tipo de navegador en un mensaje de solicitud HTTP?
+     \end{enumerate}}
+     \textbf{Respuestas:}
+
+     \begin{enumerate}
+       \item La solicitud del documento fue http://gaia.cs.umass.edu/cs453/index.html. El campo Host: indica el nombre del servidor y /cs453/index.html indica el nombre del archivo.
+       \item El navegador est\'a ejecutando HTTP versi\'on 1.1, como se indica justo antes del primer par <cr> <lf>.
+       \item El navegador solicita una conexi\'on persistente, como indica la Conexi\'on: mantener - vivo.
+       \item Esta es una pregunta con trampa. Esta informaci\'on no est\'a contenida en un mensaje HTTP en ninguna parte. Por lo tanto, no hay forma de saberlo observando solo el intercambio de mensajes HTTP. Se necesitar\'ia informaci\'on de los datagramas IP (que transportaban el segmento TCP que transportaba la solicitud HTTP GET) para responder esta pregunta.
+       \item Mozilla / 5.0. El servidor necesita la informaci\'on del tipo de navegador para enviar diferentes versiones del mismo objeto a diferentes tipos de navegadores.
+     \end{enumerate}
+
+     \section{P5. El siguiente texto muestra la respuesta enviada desde el servidor en respuesta al mensaje HTTP GET en la pregunta anterior. Contesta las siguientes preguntas, indicando d\'onde en el mensaje de abajo se encuentra la respuesta.}
+     \renewcommand{\theenumi}{\alph{enumi}}
+     \textbf{\begin{enumerate}
+               \item ?`Fue el servidor capaz de encontrar con \'exito el documento o no? ?`A qu\'e hora se proporcion\'o la respuesta del documento?
+               \item ?`Cu\'ando se modific\'o el documento por \'ultima vez?
+               \item ?`Cu\\antos bytes hay en el documento que se devuelve?
+               \item ?`Cu\'ales son los primeros 5 bytes del documento devuelto? ?`El servidor acept\'o una conexi\'on persistente?
+             \end{enumerate}}
+     \textbf{Respuestas:}
+     \begin{enumerate}
+       \item El c\'odigo de estado 200 y la frase OK indican que el servidor pudo localizar el documento correctamente. La respuesta fue proporcionada el martes 07 de marzo de 2008 12:39:45 hora del meridiano de Greenwich.
+       \item El documento index.html fue modificado por \'ultima vez el s\'abado 10 de diciembre de 2005 a las 18:27:46 GMT.
+       \item Hay 3874 bytes en el documento que se devuelve.
+       \item Los primeros cinco bytes del documento devuelto son : $<$!doc. El servidor accedi\'o a una conexi\'on persistente, como indica el campo Conexi\'on: Mantener - Vivo
+     \end{enumerate}
+
+     
+\end{document} 
+

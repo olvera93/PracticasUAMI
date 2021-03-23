@@ -1,0 +1,65 @@
+
+El programa se trata sobre el problema de productor/consumidor en donde se uso memoria 
+compartida, semaforos para controlar la memoria compartida y la llamada al sistema 
+con la funcion fork() para crear varios productores y consumidores a la vez. 
+En donde cada productor/consumidor van a producir/consumir k elementos.
+
+En donde el productor va a mostrar en pantalla el item que va a depositar en el buffer.
+El consumidor va a mostrar en pantalla el item que va a consumir en el buffer.
+
+Para esta practica se tienen 3 programas: monitor.c, productor.c y consumidor.c.
+
+* productor.c:  Crea s procesos productores. Cada proceso creado simula el
+funcionamiento de un productor, produciendo un item (a la vez) y añadiéndolos al búffer
+compartido. 
+
+* consumidor.c : : Crea t procesos consumidores. Cada proceso extrae items del
+búffer (1 a la vez).
+
+* monitor.c : Inicializa a los semaforos y a la memoria compartida. Muestra en pantalla
+los espacios que estan vacios, los espacios que estan llenos y al buffer con el valor
+que el productor introduce.
+
+****************************************************************************************************
+
+Para la ejecución del programa se tiene que abrir tres terminales en Ubuntu, una terminal es 
+para el monitor, la otra para el productor y la ultima para el consumidor.
+
+----------------------------------------------------------------------------------------------------
+Pequeña observación se tiene que ejecutar en Ubuntu normal, ya que en la terminal que tiene windows
+de ubuntu marca error al momento de depositar/consumir dice "Error al encontrar la variable"
+*En Ubuntu normal corre sin problemas*
+----------------------------------------------------------------------------------------------------
+
+1.- En la primera terminal que es para el monitor se tiene que compilar de la siguiente manera:
+		$ gcc monitor.c -o monitor
+		$./monitor
+    1.1.- Luego de ejecutar el programa pedira el tamaño del arreglo.
+    1.2.- Después de dar el tamaño del arreglo, siempre se tiene que inicializar ya que si no se 
+	  inicializa el productor/consuimdor no podran producir/consumir.
+    1.3.- Cuando el productor deposite todos los valores, se podrá ver lo que inserto dandole en 
+	  la opción 2 que es "imprimir buffer".
+    1.4.- Si quieres borrar la memoria solo tienes que dar la opción 3.
+
+2.- En la segunda terminal que es para el productor se tiene que compilar de la siguiente manera:
+		$ gcc productor.c -o productor
+		$./productor
+    2.1.- Luego de ejecutar el programa pedira cuantos productores quieres crear.
+    2.2.- Después pedira cuantos elementos quieres que produzca cada productor.
+
+
+3.- En la tercera terminal que es para el consumidor se tiene que compilar de la siguiente manera:
+		$ gcc consumidor.c -o consumidor
+		$./consumidor
+    3.1.- Luego de ejecutar el programa pedira cuantos consumidores quieres crear.
+    3.2.- Después pedira cuantos elementos quieres que consuma cada consumidor.
+
+****************************************************************************************************
+
+
+
+
+
+
+
+

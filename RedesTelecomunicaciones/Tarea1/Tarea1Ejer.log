@@ -1,0 +1,306 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.21)  24 SEP 2020 16:59
+entering extended mode
+**./Tarea1Ejer.tex
+(Tarea1Ejer.tex
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-06-18> (D:\MikTeX\tex/latex/base\article.cls
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+(D:\MikTeX\tex/latex/base\size11.clo
+File: size11.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@section=\count168
+\c@subsection=\count169
+\c@subsubsection=\count170
+\c@paragraph=\count171
+\c@subparagraph=\count172
+\c@figure=\count173
+\c@table=\count174
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+) (D:\MikTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
+
+(D:\MikTeX\tex/latex/base\latin1.def
+File: latin1.def 2018/08/11 v1.3c Input encoding file
+)) (D:\MikTeX\tex/generic/babel\babel.sty
+Package: babel 2020/06/10 3.45 The Babel package
+
+(D:\MikTeX\tex/generic/babel\babel.def
+File: babel.def 2020/06/10 3.45 Babel common definitions
+\babel@savecnt=\count175
+\U@D=\dimen135
+\l@babelnohyphens=\language79
+
+(D:\MikTeX\tex/generic/babel\txtbabel.def)
+\bbl@readstream=\read2
+)
+\bbl@dirlevel=\count176
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(D:\MikTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(D:\MikTeX\tex/latex/babel-spanish\spanish.ldf
+Language: spanish.ldf 2016/03/03 v5.0p Spanish support from the babel system
+\es@quottoks=\toks17
+\es@quotdepth=\count177
+Package babel Info: Making " an active character on input line 561.
+Package babel Info: Making . an active character on input line 662.
+Package babel Info: Making < an active character on input line 707.
+Package babel Info: Making > an active character on input line 707.
+))
+(D:\MikTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip49
+
+For additional information on amsmath, use the `?' option.
+(D:\MikTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(D:\MikTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks18
+\ex@=\dimen136
+))
+(D:\MikTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen137
+)
+(D:\MikTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count178
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count179
+\leftroot@=\count180
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count181
+\DOTSCASE@=\count182
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box45
+\strutbox@=\box46
+\big@size=\dimen138
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count183
+\c@MaxMatrixCols=\count184
+\dotsspace@=\muskip16
+\c@parentequation=\count185
+\dspbrk@lvl=\count186
+\tag@help=\toks19
+\row@=\count187
+\column@=\count188
+\maxfields@=\count189
+\andhelp@=\toks20
+\eqnshift@=\dimen139
+\alignsep@=\dimen140
+\tagshift@=\dimen141
+\tagwidth@=\dimen142
+\totwidth@=\dimen143
+\lineht@=\dimen144
+\@envbody=\toks21
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
+)
+(D:\MikTeX\tex/latex/amscls\amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks23
+\thm@bodyfont=\toks24
+\thm@headfont=\toks25
+\thm@notefont=\toks26
+\thm@headpunct=\toks27
+\thm@preskip=\skip52
+\thm@postskip=\skip53
+\thm@headsep=\skip54
+\dth@everypar=\toks28
+)
+(D:\MikTeX\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(D:\MikTeX\tex/latex/enumitem\enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\enitkv@toks@=\toks29
+\labelindent=\skip55
+\enit@outerparindent=\dimen145
+\enit@toks=\toks30
+\enit@inbox=\box47
+\enit@count@id=\count190
+\enitdp@description=\count191
+)
+(D:\MikTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count192
+\float@exts=\toks31
+\float@box=\box48
+\@float@everytoks=\toks32
+\@floatcapt=\box49
+)
+(D:\MikTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(D:\MikTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks33
+)
+(D:\MikTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+
+(D:\MikTeX\tex/latex/graphics\trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(D:\MikTeX\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(D:\MikTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen146
+\Gin@req@width=\dimen147
+)
+\c@Teo=\count193
+\c@Cor=\count194
+\c@Lem=\count195
+\c@Prop=\count196
+\c@Def=\count197
+\c@Obs=\count198
+
+(D:\MikTeX\tex/latex/l3backend\l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-06-29 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count199
+\l__pdf_internal_box=\box50
+) (Tarea1Ejer.aux
+LaTeX Info: Redefining \. on input line 8.
+LaTeX Info: Redefining \% on input line 8.
+)
+\openout1 = `Tarea1Ejer.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Info: Redefining \. on input line 28.
+LaTeX Info: Redefining \% on input line 28.
+
+(D:\MikTeX\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count266
+\scratchdimen=\dimen148
+\scratchbox=\box51
+\nofMPsegments=\count267
+\nofMParguments=\count268
+\everyMPshowfont=\toks34
+\MPscratchCnt=\count269
+\MPscratchDim=\dimen149
+\MPnumerator=\count270
+\makeMPintoPDFobject=\count271
+\everyMPtoPDFconversion=\toks35
+) (D:\MikTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 29.
+
+
+(D:\MikTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 29.
+
+ (D:\MikTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Overfull \hbox (17.32288pt too wide) in paragraph at lines 33--33
+\OT1/cmr/bx/n/14.4 ?`Como des-cri-be Wi-ki-pe-dia el pro-to-co-lo di-plomati-
+
+ []
+
+[1
+
+{C:/Users/Gonzalo Olvera/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+[2]
+Overfull \hbox (0.64459pt too wide) in paragraph at lines 63--63
+\OT1/cmr/bx/n/14.4 ca-da usua-rio trans-mi-te con-ti-nua-men-te a 1 Mbps
+ []
+
+[3] [4] [5] [6] [7] [8] [9] [10]
+Overfull \hbox (5.3409pt too wide) in paragraph at lines 193--193
+[]\OT1/cmr/bx/n/14.4 P11. En el pro-ble-ma an-te-rior, su-pon-ga-mos $\OML/cmm/
+m/it/14.4 R[] \OT1/cmr/m/n/14.4 =
+ []
+
+[11] [12] [13] [14] [15] [16]
+Overfull \hbox (37.48404pt too wide) in paragraph at lines 323--323
+[]\OT1/cmr/bx/n/10.95 Dos pagi-nas web dis-tin-tas (por ejem-plo, www.mit.edu/
+research.html
+ []
+
+[17] [18] [19]
+Overfull \hbox (21.88176pt too wide) in paragraph at lines 356--357
+[]\OT1/cmr/m/n/10.95 La so-li-ci-tud del do-cu-men-to fue http://gaia.cs.umass.
+edu/cs453/index.html.
+ []
+
+[20]
+Overfull \hbox (0.82639pt too wide) in paragraph at lines 363--363
+\OT1/cmr/bx/n/14.4 tes-ta las si-guien-tes pre-gun-tas, in-di-can-do donde
+ []
+
+[21] (Tarea1Ejer.aux
+LaTeX Info: Redefining \. on input line 8.
+LaTeX Info: Redefining \% on input line 8.
+) ) 
+Here is how much of TeX's memory you used:
+ 3538 strings out of 480790
+ 47324 string characters out of 2913582
+ 310157 words of memory out of 3000000
+ 19517 multiletter control sequences out of 15000+200000
+ 543090 words of font info for 65 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 30i,6n,35p,1174b,361s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Gonzalo Olvera\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
+pi600\tcrm1095.pk><D:/MikTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/MikT
+eX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/MikTeX/fonts/type1/public/amsf
+onts/cm/cmbxti10.pfb><D:/MikTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/M
+ikTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/MikTeX/fonts/type1/public/a
+msfonts/cm/cmmi8.pfb><D:/MikTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Mi
+kTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/MikTeX/fonts/type1/public/ams
+fonts/cm/cmr17.pfb><D:/MikTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/MikTe
+X/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/MikTeX/fonts/type1/public/amsfont
+s/cm/cmsy10.pfb><D:/MikTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/MikTeX/
+fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on Tarea1Ejer.pdf (21 pages, 225132 bytes).
+PDF statistics:
+ 132 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

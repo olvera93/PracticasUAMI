@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"practica4sol","l":"ApalooArrayList"},{"p":"practica4sol","l":"ApalooDobleLL"},{"p":"practica4sol","l":"ApalooLinkedList"},{"p":"practica4sol","l":"Contacto"},{"p":"practica4sol","l":"ListaOrdenada"},{"p":"practica4sol","l":"Principal"}]
