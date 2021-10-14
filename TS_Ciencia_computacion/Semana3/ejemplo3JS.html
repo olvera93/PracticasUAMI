@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejemplo 3</title>
+        <meta charset="UTF-8">
+        </head>
+
+        <body>
+            <p></p>
+
+            <script>
+                opt1 = prompt("Ingresa un numero");
+                opt2 = prompt("Ingresa un numero");
+
+                console.log("Operadores: " + opt1 + " , " + opt2 );
+
+                intOp1 = parseInt(opt1);
+                intOp2 = parseInt(opt2);
+
+                r = resta(intOp1, intOp2);
+
+                console.log("Resultado resta: " + r);
+
+                suma(intOp1, intOp2);
+
+                suma("4", "6");
+
+                suma(3,4,5);
+
+                multiplicacion();
+
+                multiplicacion(3,4);
+
+                function resta(a, b){
+                    return a - b;
+                }
+
+                function suma(){
+                    console.log("#Argumentos: " + arguments.length);
+                    console.log("Argumento 1: " + arguments[0]);
+                    console.log("Argumento 2: " + arguments[1]);
+                    console.log("Argumento 3: " + arguments[2]);
+                    console.log("Resultado suma: " + (arguments[0] + arguments[1]));
+                }
+
+                function multiplicacion(a = 5, b = 20){
+                    console.log("Multiplicacion: " + a*b);
+                }
+
+            </script>
+
+        </body>
+            
+</html>

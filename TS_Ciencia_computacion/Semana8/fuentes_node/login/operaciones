@@ -1,0 +1,16 @@
+create database usuarios;
+
+create table `users` (`id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,`nickname` varchar(80) NOT NULL,`nombre` varchar(80) NOT NULL,`password` varchar(80) NOT NULL);
+
+insert into users VALUES (1,'uweb1', 'Usuario web','2021uweb1ts');
+insert into users VALUES (2,'uweb2', 'Usuario web','2021uweb2ts');
+insert into users VALUES (3,'uweb3', 'Usuario web','2021uweb3ts');
+insert into users VALUES (4,'uweb4', 'Usuario web','2021uweb4ts');
+select * from users;
+
+create user 'uwebsql'@'localhost' IDENTIFIED BY '2021uwebts-sql';
+
+grant all privileges on usuarios.* to 'uwebsql'@'localhost';
+
+alter user 'uwebsql'@'localhost' IDENTIFIED WITH mysql_native_password BY '2021uwebts-sql';
+

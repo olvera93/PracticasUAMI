@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo 2 - Drag and Drop</title>
+
+    <script type="text/javascript">
+        
+        function iniciaArrastre(e) {
+            e.dataTransfer.setData("paisaje1", e.target.id);
+            console.log("Se guardo el elemento: " + e.target.id);
+        }
+
+        function entrando(e) {
+            e.preventDefault();
+            console.log("Se eliminó comportamiento por default ");
+        }
+
+        function soltado(e) {
+            var id = e.dataTransfer.getData("paisaje1");
+            console.log("id: " + id);
+            var objeto = document.getElementById(id);
+            e.target.appendChild(objeto);
+            console.log("Se agregó el elemento: " + id);
+        }
+    </script>
+
+    <style type="text/css">
+        #contenedor{
+            border: solid brown;
+            width: 300px;
+            height: 300px;
+            float: left;
+        }
+
+        </style>
+
+</head>
+<body>
+
+    <h1>Ejemplo 2</h1>
+
+    <img src="paisaje1.png" id="paisaje1" width="150" height="150" draggable="true" ondragstart="iniciaArrastre(event)">
+    
+
+    <div id="contenedor" ondragover="entrando(event)" ondrop="soltado(event)">
+        </div>
+
+</body>
+</html>

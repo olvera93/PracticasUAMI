@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+   <h1 id="id1">Cabecera</h1>
+
+
+   <script>
+   var color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+   var i=0;
+   function getRandomInt(max) {
+     return Math.floor(Math.random() * max);
+   }
+   function setCambiar() {
+      document.getElementById('id1').style.color = color[(i+1)%color.length];
+      i++;
+   }
+   setInterval(setCambiar, 3000);
+   </script>
+</body>
+</html>

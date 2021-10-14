@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <script src="chart.min.js"></script>
+
+ </head>
+ <body>
+
+<canvas id="miChart"></canvas>
+<script>
+var ctx = document.getElementById('miChart').getContext('2d');
+
+
+const etiquetas =  ['Rojo', 'Azul', 'Amarillo', 'Verde', 'Morado', 'Naranja'];
+const datos = {
+  labels: etiquetas,
+  datasets: [
+    {
+      label: 'Grafica 1',
+      data: [8, 5, 3, 5, 2, 3],
+      borderColor: 'red',
+      backgroundColor: 'red',
+      yAxisID: 'y',
+    },
+    {
+      label: 'Grafica 2',
+      data: [2, 6, 6, 1, 4, 7],
+      borderColor: 'green',
+      backgroundColor: 'green',
+      yAxisID: 'y1',
+    }
+  ]
+};
+
+const config = {
+  type: 'line',
+  data: datos,
+  options: {
+    responsive: true,
+    interaction: {
+      mode: 'index',
+      intersect: false,
+    },
+    stacked: false,
+    plugins: {
+      title: {
+        display: true,
+        text: 'Grafica de líneas'
+      }
+    },
+    scales: {
+      y: {
+        type: 'linear',
+        display: true,
+        position: 'left',
+      },
+      y1: {
+        type: 'linear',
+        display: true,
+        position: 'right',
+
+      },
+    }
+  },
+};
+
+var myChart = new Chart(ctx, config);
+</script>
+</body>
+</html>
+
+
+

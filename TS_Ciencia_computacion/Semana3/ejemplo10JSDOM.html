@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejemplo 10 JSDOM</title>
+    </head>
+
+    <body>
+        <p id="intro">Hola Mundo!</p>
+        <p>Obtiene un elemento por el metodo <b>getElementById</b></p>
+        <p id="demo"></p>
+
+        <script>
+            var elemento = document.getElementById("intro");
+            document.getElementById("demo").innerHTML = "El texto del elemento es:" + elemento.innerHTML;
+        </script>
+
+    </body>
+</html>

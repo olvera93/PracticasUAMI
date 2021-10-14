@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+}
+
+
+/* La forma redonda de la mandarina */
+.mandarina {
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background: #ff9c08;
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 180px;
+}
+
+/* El tallo de la mandarina */
+.palo{
+    left: 50%;
+    top:  17.2%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background: #9b4b09;
+    width: 20px;
+    height: 100px;
+    border-radius: 100% 7%/ 6% 7%;
+    box-shadow: 1px 1px rgba(0,0,0,0.2);
+ }
+
+/* La hoja de la mandarina */
+.mandarina:before{
+    background: #27fa27;
+    content: '';
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    margin: -51px 0 0 100px;
+    border-radius: 100px 0;
+    left: 27%;
+    top: -7%;
+}
+
+/* La hoja de la mandarina */
+.hoja-mandarina {
+    background: #27fa27;
+    rotate: 90deg;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    margin: -51px 0 0 100px;
+    border-radius: 100px 0;
+    left: 38.4%;
+    top: 20%;
+    display: block;
+}
+
+/* Simulando los puntitos que tiene la mandarina */
+.puntitos {
+    margin-left: 20px;
+    margin-right: 20px;
+    left: 43%;
+    top: 30%;
+    display: block;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background: #000000;
+    position: absolute;
+    width: 7px;
+    height: 6px;
+    border-radius: 3px;
+}
+
+.puntitos:before {
+    margin-left: 9px;
+    content: '';
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background: #000000;
+    position: absolute;
+    width: 7px;
+    height: 6px;
+    border-radius: 3px;
+}
+
+.puntitos2 {
+    margin-left: 25px;
+    margin-right: 25px;
+    left: 42%;
+    top: 30%;
+    display: block;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background: #000000;
+    position: absolute;
+    width: 7px;
+    height: 6px;
+    border-radius: 3px;
+}
+
+.puntitos2:before {
+    margin-left: 10px;
+    content: '';
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background: #000000;
+    position: absolute;
+    width: 7px;
+    height: 6px;
+    border-radius: 3px;
+}

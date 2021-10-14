@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+}
+
+/* La forma redonda de la manzana */
+.manzana {
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background: #fc2d2d;
+    width: 208px;
+    height: 198px;
+    border-radius: 35% 35% 41% 41% / 42% 42% 75% 75%;
+}
+
+/* La hoja de la manzana */
+.manzana:before{
+    background: #27fa27;
+    content: '';
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    margin: -51px 0 0 100px;
+    border-radius: 100px 0;
+}

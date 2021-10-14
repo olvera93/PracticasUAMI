@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejemplo6</title>
+    </head>
+    <body>
+        <script>
+
+            function getAproximacion() {
+
+                str1 = document.getElementById("input1").value;
+                valor1 = parseFloat(str1);
+
+                str2 = document.getElementById("input2").value;
+                valor2 = parseFloat(str2);
+
+                r = aproximacion(valor1, valor2);
+
+                document.getElementById("output").value = r;
+            }
+
+            function factorial(n) {
+                fact = 1;
+                for (i = 1; i <= n; i++) {
+                    fact = fact * i;
+                }
+
+                return fact;
+            }
+
+            function potencia(base, exponente) {
+                pot = 1;
+
+                while (exponente > 0) {
+                    pot = pot * base;
+                    exponente--;
+                }
+
+                return pot;
+            }
+
+            function aproximacion(n, x) {
+                suma = 0;
+
+                do {
+                    suma = suma + potencia(n, x)/factorial(n);
+                    n--;
+                }while (n > 0);
+                return suma;
+            }
+
+
+        </script>
+
+        <form action="javascript:getAproximacion();">
+            Ingresa n: <input type="number" id="input1" name="cajas" placeholder="p.e. 45" required><br><br>
+            Ingresa x: <input type="number" id="input2" name="cajas" placeholder="p.e. 10" required><br><br>
+            Resultado: <input type="text" id="output" name="cajas" readonly><br><br>
+            <input type="submit" value="Enviar">
+    
+        </form>
+    </body>
+</html>

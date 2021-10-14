@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Drag and Drop</title>
+
+    <style type="text/css">
+        #contenedor { 
+            border: solid brown;
+            width: 300px;
+            height: 300px;
+            float: left;
+        }
+        </style>
+
+</head>
+<body>
+
+    <h1>Ejemplo 1</h1>
+
+    <img src="paisaje1.png" alt="Imagen 1" width="150" height="150" id="img1" draggable="true"
+    ondrag="console.log('objeto arrastrado')"
+    ondragstart="console.log('inició el arrastre')">
+    
+<div id="contenedor"
+ondragenter="console.log('entro al contenedor')"
+ondragleave="console.log('salió en el div')">
+
+</div>
+
+</body>
+</html>

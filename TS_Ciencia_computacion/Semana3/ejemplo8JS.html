@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejemplo 8</title>
+    </head>
+    <body>
+        <script>
+      
+            var contacto;
+            function Contacto(nombre, fecha,correo){
+                
+                this.nombre=nombre;
+                this.fecha=fecha;
+                this.correo=correo;
+               
+                this.getNombre = function(){
+                   return this.nombre;
+                }
+                this.getFecha = function(){
+                   return this.fecha;
+                }
+                this.getCorreo = function(){
+                   return this.correo;
+                }   
+                this.setNombre = function(nombre){
+                   this.nombre=nombre;
+                }
+                this.setFecha = function(fecha){
+                   this.fecha=fecha;
+                }
+                this.setCorreo = function(correo){
+                   this.correo=correo;
+                }                                 
+            }                  
+            function getDatos(){
+               let form = document.getElementById('info');
+               let i;
+               contacto = new Contacto(form[0].value,form[1].value,form[2].value);
+               
+               console.log(contacto.getNombre());
+               console.log(contacto.getFecha());
+               console.log(contacto.getCorreo());
+               console.log(contacto);
+           
+            }     
+                                               
+         </script>
+         
+         <form action="javascript:getDatos();" id="info">
+            Nombre:<input type="text" name="cajas" placeholder="p.e. Juan" id="input-nombre" required> <br><br>
+            Fecha de nacimiento:<input type="date" name="cajas" id="input-fecha" placeholder="p.e. 45" required> <br><br>
+            Correo:<input type="email" name="cajas" id="input-correo" placeholder="juan@gmail.com" required> <br><br>
+            <input type="submit" value="Enviar">
+        </form>
+    </body>
+</html>

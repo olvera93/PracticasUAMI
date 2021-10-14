@@ -1,0 +1,174 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-size: cover;
+    background-position: top center;
+    font-family: sans-serif;    
+}
+
+
+#menu-principal {
+    background: #3a7aa4;
+    text-align: center;
+}
+
+/* Colocar el menu en medio */
+#menu-principal ul{
+    display: inline-flex;
+    list-style: none;
+    color: #FFFFFF;
+}
+
+/* Dar un espacio a las opciones del menu */
+#menu-principal ul li{
+    width: 120px;
+    margin: 15px;
+    padding: 15px;
+}
+
+/* Color de las letras de cada menu es blanco */
+#menu-principal ul li a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+/* primer elemento menu principal */
+#item-actual, #menu-principal ul li:hover{
+    background: #3a3a3a;
+    text-decoration: none;
+    text-shadow: 2px 2px 2px rgba(  0, 0, 0, 0.3 );
+    color: #FFFFFF;
+    border-radius: 3px;
+}
+
+
+/* Oculta el sub-menu */
+#sub-menu {
+    display: none;
+}
+
+#menu-principal ul li:hover #sub-menu  {
+    display: block;
+    position: absolute;
+    background: rgb(0, 93, 100);
+    margin-top: 15px;
+    margin-left: -15px;
+}
+
+/* Se despliega el sub-menu de forma horizontal */
+#sub-menu  ul {
+    display: block;
+    margin: 10px;
+}
+
+/* Se le agrega unas lineas debajo del nombre para darle estatica */
+#sub-menu  ul li:hover {
+    width: 150px;
+    padding: 10px;
+    border-bottom: 2px double #FFFFFF;
+    background: transparent;
+    border-radius: 0;
+}
+
+/* un sub-menu con otro color */
+#sub-menu ul li:hover {
+    background: #3a8fa4;
+}
+
+/* Las letras del sub-menu cambian de color */
+#sub-menu ul li a:hover {
+    color: #00ffd5;
+}
+
+/* Oculta el sub-menu */
+#sub-menu2 {
+    display: none;
+}
+
+#menu-principal ul li:hover #sub-menu2  {
+    display: block;
+    position: absolute;
+    background: rgb(0, 93, 100);
+    margin-top: 15px;
+    margin-left: -15px;
+}
+
+/* Se despliega el sub-menu de forma horizontal */
+#sub-menu2  ul {
+    display: block;
+    margin: 10px;
+}
+
+/* Se le agrega unas lineas debajo del nombre para darle estatica */
+#sub-menu2  ul li:hover {
+    width: 150px;
+    padding: 10px;
+    border-bottom: 2px double #FFFFFF;
+    background: transparent;
+    border-radius: 0;
+}
+
+/* un sub-menu con otro color */
+#sub-menu2 ul li:hover {
+    background: #3a8fa4;
+}
+
+/* Las letras del sub-menu cambian de color */
+#sub-menu2 ul li a:hover {
+    color: #00ffd5;
+}
+
+#sub-menu2 .fab{
+    margin-right: 8px;
+}
+
+
+/* Oculta el sub-menu */
+#sub-menu3 {
+    display: none;
+}
+
+#menu-principal ul li:hover #sub-menu3  {
+    display: block;
+    position: absolute;
+    background: rgb(0, 93, 100);
+    margin-top: 15px;
+    margin-left: -15px;
+}
+
+/* Se despliega el sub-menu de forma horizontal */
+#sub-menu3  ul {
+    display: block;
+    margin: 10px;
+}
+
+/* Se le agrega unas lineas debajo del nombre para darle estatica */
+#sub-menu3  ul li:hover {
+    width: 150px;
+    padding: 10px;
+    border-bottom: 2px double #FFFFFF;
+    background: transparent;
+    border-radius: 0;
+}
+
+/* un sub-menu con otro color */
+#sub-menu3 ul li:hover {
+    background: #3a8fa4;
+}
+
+/* Las letras del sub-menu cambian de color */
+#sub-menu3 ul li a:hover {
+    color: #00ffd5;
+}
+
+/* Separación del icono del titulo */
+#sub-menu3 .fab{
+    margin-right: 8px;
+}
+
+  
+  

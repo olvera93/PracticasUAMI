@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                font-weight: bold;
+            }
+
+            p{
+                font-style: italic;
+            }
+
+            .ejemplo2 {
+                text-align: center;
+                background-color: fuchsia;
+                color: blue;
+            }
+
+            .ejemplo3 {
+                text-align: right;
+                background-color: turquoise;
+                color: darkblue;
+            }
+
+            h1, h3 {
+                color: green;
+            }
+
+            #miId {
+                text-align: center;
+                background-color: fuchsia;
+                color: black;
+            }
+
+            .clase {
+                text-align: right;
+                background-color: turquoise;
+                color: red;
+            }
+
+            div > h2 {
+                text-align: left;
+                background-color: green;
+                color: white;
+            }
+
+            div + p {
+                text-align: center;
+                background-color: khaki;
+                color: purple;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <h1>Es el título h1</h1>
+        <h3>Es el título h3</h3>
+
+        <div class="clase">Div por clase</div>
+        <div class="ejemplo2">Div con el segundo estilo</div>
+        <div class="ejemplo3">Div con el tercer estilo</div>
+        <div id="miId">Div por id</div>
+        <div class="clase">
+            <h2>Soy un h2 y mi padre es un div</h2>
+            <p>Otro div por clase y con cursiva por párrafo</p>
+        </div>
+        <p>Solo un párrafo 1</p>
+        <h2>Solo un h2</h2>
+        <p>Solo un párrafo 2</p>
+
+    </body>
+</html>

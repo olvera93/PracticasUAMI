@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Eventos del ratón</h1>
+
+<p onclick="manejadorOnclik()" id="evento1">onclick</p>
+
+<p oncontextmenu="manejadorOncontextMenu()" id="evento2">oncontextmenu</p>
+
+<p onmousedown="manejadorMouseDown()" onmouseup="manejadorMouseUp()" id="evento3">onmousedown y onmouseup</p>
+
+<p onmouseover="manejadorOnmouseover()" onmouseout="manejadorOnmouseout()" id="evento4">onmouseover</p>
+
+<input type="text" onkeydown="manejadorOnkeydown(event)" onkeyup="manejadorOnkeyup(event)" placeholder="onkeydown">
+
+</br>
+</br>
+
+<input type="text" onkeypress="manejadorOnkeypress(event)" onkeyup="manejadorOnkeyup(event)" placeholder="onkeypress">
+
+<p ontouchmove="manejadorOntouchmove(event)">Presiona touch y sin soltar desplazate en el documento</p>
+
+Coordenadas:<p id="test"></p>
+</br>
+</br>
+Coordenadas:<p id="test2"></p>
+
+<script>
+function manejadorOnclik() {
+   document.getElementById("evento1").style.color = "red";
+}
+
+function manejadorOncontextMenu() {
+   document.getElementById("evento2").style.color = "green";
+}
+
+function manejadorMouseDown() {
+  document.getElementById("evento3").style.color = "lime";
+}
+
+function manejadorMouseUp() {
+  document.getElementById("evento3").style.color = "orange";
+}
+
+function manejadorOnmouseover() {
+  document.getElementById("evento4").style.color = "yellow";
+}
+
+function manejadorOnmouseout() {
+  document.getElementById("evento4").style.color = "black";
+}
+
+function manejadorOnkeydown(evt) { 
+    console.log("Manejador onkeydown\n");    
+    
+}
+function manejadorOnkeypress(evt) {
+
+    var charCode = event.keyCode || event.which;
+    var charStr = String.fromCharCode(charCode)     
+    console.log("Manejador onkeypress: \n" + charStr);
+}
+
+function manejadorOnkeyup(evt) {
+   console.log("onkeyup handler");
+}
+
+function manejadorOntouchmove(event) {
+  var x,z;
+  var y,w;
+  x = event.touches[0].clientX;
+  y = event.touches[0].clientY;
+  document.getElementById("test").innerHTML = x + ", " + y;
+  if(event.touches.length>1){
+     z = event.touches[1].clientX;
+     w = event.touches[1].clientY;
+     document.getElementById("test2").innerHTML = z + ", " + w;     
+  }
+}
+
+</script>
+
+</body>
+</html>

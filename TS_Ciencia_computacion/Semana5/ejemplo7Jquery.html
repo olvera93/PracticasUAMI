@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+   
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/style4.css" />
+    <script>
+        //Codigo JavaScript y JQuery
+
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("#div1").animate({left: '250px'});
+                $(".clase").animate({
+                    left: '250px',
+                    opacity: '0.5',
+                    height: '150px',
+                    width: '150px'
+                });
+                $("#div3").slideUp();
+            });
+        });
+
+    </script>
+    <meta charset="UTF-8">
+   
+    <title>Ejemplo 7</title>
+</head>
+<body>
+
+    <button>Iniciar animación</button>
+
+    <p>Por default, todos los elementos HTML tienen una posición estática, y
+        no pueden moverse. Para manipular la posición, recuerden primero
+        aplicar la propiedad posición, por medio de CSS, a relative, fixed o
+        absolute.
+    </p>
+
+    <div style="background: blue;height: 100px;width:100px;position:absolute;" id="div1"></div>
+    <div class="clase" id="div2"></div>
+    <div style="background: green;height:100px;width:100px;top:302px;position:absolute;" id="div3"></div>
+   
+</body>
+</html>

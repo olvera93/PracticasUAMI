@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        //Codigo JavaScript y JQuery
+
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("div").append("<p>Texto agregado</p><br>");
+            });
+
+            $("#btn2").click(function(){
+                $("ol").append("<li>Item nuevo</li>");
+            });
+        });
+
+    </script>
+    <meta charset="UTF-8">
+   
+    <title>Ejemplo 8</title>
+</head>
+<body>
+
+    <div>
+        <p>Este es un párrafo</p>
+        <p>Este es otro párrafo</p>
+    </div>
+
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+
+    <button id="btn1">Insertar texto</button>
+    <button id="btn2">Insertar a lista</button>
+
+
+</body>
+</html>

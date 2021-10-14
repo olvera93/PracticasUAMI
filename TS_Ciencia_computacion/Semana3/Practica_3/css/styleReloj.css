@@ -1,0 +1,131 @@
+body{
+	background:linear-gradient(90deg, #DA22FF 10%, #9733EE 90%);
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+.contenedor-principal {
+	width: 90%;
+	height: 100%;
+	position: relative;
+	max-width: 600px;
+	margin: 250px auto;
+  }
+
+
+  .contenedor {
+	width: 90%;
+	height: 60%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: -10%;
+	right: 0;
+	margin: -10% auto;
+	background: rgb(255, 255, 255);
+	color: #312747;
+	font-weight: 700;
+	border-radius: 4px;
+	padding: 10px 5px 15px;
+  }
+
+  .fecha div {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 35px;
+	display: inline-block;
+	text-align: center;
+  }
+
+
+.contenedor2 {
+	position: relative;
+	max-width:  600px;
+}
+
+.contenedor2 .hora {
+	display: flex;
+	margin: 20px auto;
+}
+
+.contenedor2 .hora .tiempo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: rgb(255, 255, 255);
+	margin-right: 20px;
+	font-size: 40px;
+	min-width: 160px;
+	font-weight: 700;
+	padding: 10px 5px 15px;
+	border-radius: 4px;
+	color: #ff0083;
+}
+
+.contenedor2 .hora .tiempo span{
+	margin-top: 2px;
+	font-size: 20px;
+	font-weight: 600;
+	color: #312747;
+} 
+
+
+.wave {
+	bottom: 0;
+	right: 0;
+	position: absolute;
+}
+
+
+
+/*
+ .tiempo{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: rgb(255, 255, 255);
+	margin-right: 20px;
+	font-size: 40px;
+	min-width: 110px;
+	font-weight: 800;
+	padding: 10px 5px 15px;
+	border-radius: 6px;
+	color: #ff0083;
+  }
+
+
+  .cabecera p {
+	display: inline-block;
+	line-height: 1em;
+  }
+
+  .fecha {
+	font-family: arial;
+	text-align: center;
+	font-size: 1.5em;
+	margin-bottom: 5px;
+	padding: 20px;
+	width: 100%;
+	
+  }
+
+  .hora {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	width: 100%;
+	padding: 20px;
+	font-size: 4em;
+	text-align: center;
+  }
+
+  .wave {
+	bottom: 0;
+	right: 0;
+	position: absolute;
+}*/
+ 

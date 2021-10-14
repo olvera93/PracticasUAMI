@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+   
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/style3.css" />
+    <script>
+        //Codigo JavaScript y JQuery
+
+        $(document).ready(function(){
+            $("#miDiv").on({
+                mouseenter: function(){
+                    $(this).css("background-color", "green");
+            },
+                mouseleave: function(){
+                    $(this).css("background-color", "red");
+                },
+                click: function(){
+                    $(this).css("background-color", "blue");
+                } 
+            });
+        });
+
+    </script>
+    <meta charset="UTF-8">
+   
+    <title>Ejemplo 5</title>
+</head>
+<body>
+
+    <div class="azul" id="miDiv">
+        Div!
+    </div>
+
+   
+</body>
+</html>

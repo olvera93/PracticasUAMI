@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+   <body>
+      <p>Hola Mundo!</p>
+      <p class="intro">El DOM es muy util.</p>
+      <p class="intro">Este ejemplo muestra como trabaja el metodo <b>querySelectorAll</b> </p>
+      <p id="demo"></p>
+      <script>
+         var x = document.querySelectorAll("p.intro");
+         document.getElementById("demo").innerHTML = 'El primer parrafo (indice 0) con class="intro": ' + x[0].innerHTML;
+     </script>
+
+   </body>
+</html>
+

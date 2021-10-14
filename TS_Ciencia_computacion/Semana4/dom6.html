@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form id="frm1">
+  Nombre: <input type="text" name="fnombre" value="Hola"><br>
+  Apellido: <input type="text" name="lnombre" value="Mundo"><br><br>
+  <input type="submit" value="Enviar">
+</form> 
+
+<p>Dar click en "Presionar aqui!".</p>
+
+<button onclick="getDatos()">Presionar aqui!</button>
+
+<p id="demo"></p>
+
+<script>
+function getDatos() {
+    var x = document.forms["frm1"];
+    var text = "";
+    var i;
+    for (i = 0; i < x.length ;i++) {
+        text += x.elements[i].value + "<br>";
+    }
+    document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html>

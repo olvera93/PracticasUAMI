@@ -1,0 +1,4 @@
+Primero se tiene que abrir el archivo "formulario.html".
+Una vez llenado el formulario al momento de darle click al
+botón enviar va a dirigir a página en este caso es
+"Practica_1.html"

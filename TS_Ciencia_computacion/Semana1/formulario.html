@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulario</title>
+    </head>
+
+    <body>
+
+        <h1>Ejemplo simple de la etiqueta form</h1>
+        <p>Selecciona una de la opciones</p>
+
+        <script>
+            function getValores() {
+                alert("Hola!")
+            }
+        </script>
+        
+        <form action="javascript:getValores();" method="post">
+            <input id="html" type="radio" name="opcion" value="HTML">
+            <label for="html">HTML</label><br>
+            <input id="css" type="radio" name="opcion" value="CSS">
+            <label for="css">CSS</label><br>
+            <input id="javascript" type="radio" name="opcion" value="Javascript">
+            <label for="javascript">Javascript</label><br>
+            <input id="number" name="cajas" placeholder="p.e. 45"><br>
+            <br>
+            <input type="date" name="cajas"><br><br>
+            <input type="password" name="cajas" placeholder="password"/><br><br>
+            <input type="email" id="user-email" placeholder="p.e. olvera@izt.uam.mx" required/><br><br>
+            <input type="submit" value="Enviar"/>
+        </form>
+
+    </body>
+</html>

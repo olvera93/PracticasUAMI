@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+    <link rel="stylesheet" type="text/css" href="css/calculadora.css"/>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/calculadora.js"></script>
+    
+</head>
+<body>
+    <div class="fondo">
+        <div class="calculadora">
+            <h1>Calculadora</h1>
+            <form action="javascript:enviar();">
+               <input type="text" name="resultado" id="resultado" value="">
+               <table>
+                <tr>
+                    <td><button type="button" class="boton" onclick="limpiar()">C</button></td>
+                    <td><button type="button" class="boton" onclick="regresar()"><</button></td>
+                    <td><button type="button" class="boton" onclick="insertar('/')">/</button></td>
+                    <td><button type="button" class="boton" onclick="insertar('*')">x</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" class="boton" onclick="insertar('7')">7</button></td>
+                    <td><button type="button" class="boton" onclick="insertar('8')">8</button></td>
+                    <td><button type="button" class="boton" onclick="insertar('9')">9</button></td>
+                    <td><button type="button" class="boton" onclick="insertar('-')">-</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" class="boton" onclick="insertar('4')">4</button></td>
+                    <td><button type="button" class="boton" onclick="insertar('5')">5</button></td>
+                    <td><button type="button" class="boton" onclick="insertar('6')">6</button></td>
+                    <td><button type="button" class="boton" onclick="insertar('+')">+</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" class="boton" onclick="insertar('1')">1</button></td>
+                    <td><button type="button" class="boton" onclick="insertar('2')">2</button></td>
+                    <td><button type="button" class="boton" onclick="insertar('3')">3</button></td>
+                    <td rowspan="2"><button type="submit" class="boton" style="height: 106px">=</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button type="button" class="boton" style="width: 106px;" onclick="insertar('0')">0</button></td>
+                    <td><button type="button" class="boton" onclick="insertar('.')">.</button></td>
+                </tr>
+            </table>
+          </form>  
+        </div>
+    </div>
+</body>
+</html>

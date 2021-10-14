@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+    <p>Hora:</p>
+    <p id="test"></p>
+
+    <script>
+
+
+        function obtenerHora() {
+
+            var d = new Date();
+            var dia = d.getDate();
+            var hora = d.getHours();
+            var minuto = d.getMinutes();
+            var segundo = d.getSeconds();
+
+            document.getElementById("test").innerHTML = hora + ":" + minuto + ":" + segundo;
+        }
+
+        setInterval(obtenerHora, 1000);
+    </script>
+    
+</body>
+</html>

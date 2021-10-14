@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+   <body>
+
+      <p>Hola Mundo!</p>
+      <p class="intro">Buscando por clase.</p>
+      <p class="intro">Ejemplo del metodo <b>getElementsByClassName</b> </p>
+      <p id="demo"></p>
+      <script>
+         var x = document.getElementsByClassName("intro");
+         document.getElementById("demo").innerHTML = 'El primer parrafo (index 0) con clase="intro": ' + x[0].innerHTML;
+      </script>
+   </body>
+</html>

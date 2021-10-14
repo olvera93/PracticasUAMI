@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejemplo 9</title>
+    </head>
+    <body>
+        <script>
+
+            var contacto;
+
+            class Persona{
+                constructor(nombre, fecha) {
+                    this.nombre = nombre;
+                    this.fecha = fecha;
+                }
+
+                get getNombre() {
+                    return this.nombre;
+                }
+
+                get getFecha() {
+                    return this.fecha;
+                }
+
+                set setNombre(nombre) {
+                    this.nombre = nombre;
+                }
+
+                set setFecha(fecha) {
+                    this.fecha = fecha;
+                }
+
+            }
+            
+            class Contacto extends Persona{
+
+                constructor(nombre, fecha, correo) {
+                    super(nombre, fecha);
+                    this.correo = correo;
+                }
+
+                get getCorreo() {
+                    return this.correo;
+                }
+
+                set setCorreo(correo) {
+                    this.correo = correo;
+                }
+                
+            }
+
+            function getDatos() {
+                let form = document.getElementById("info");
+                let i;
+                contacto = new Contacto(form[0].value, form[1].value, form[2].value);
+
+                console.log(contacto.getNombre);
+                console.log(contacto.getFecha);
+                console.log(contacto.getCorreo);
+                console.log(contacto);
+
+            }
+
+        </script>
+
+        <form action="javascript:getDatos();" id="info">
+            Nombre:<input type="text" name="cajas" placeholder="p.e. Juan" id="input-nombre" required> <br><br>
+            Fecha de nacimiento:<input type="date" name="cajas" id="input-fecha" placeholder="p.e. 45" required> <br><br>
+            Correo:<input type="email" name="cajas" id="input-correo" placeholder="juan@gmail.com" required> <br><br>
+            <input type="submit" value="Enviar">
+        </form>
+    </body>
+</html>

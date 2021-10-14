@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+}
+
+
+.pera {
+    width: 400px;
+    height: 400px;
+    left: 50%;
+    top: 65%;
+    background: #92ff03;
+    border-radius: 50% 10% 50% 50%;
+    transform: rotate(-45deg);
+    transform: translate(-50%, -50%);
+    position: absolute;
+  }
+  
+  /* El tallo de la pera */
+.palo{
+    left: 63.6%;
+    top:  29%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transform: rotate(45deg);
+    background: #9b4b09;
+    width: 20px;
+    height: 100px;
+    border-radius: 100% 7%/ 6% 7%;
+    box-shadow: 1px 1px rgba(0,0,0,0.2);
+ }
+ 
+ /* La hoja de la pera */
+.hoja-pera {
+    background: #27fa27;
+    rotate: 90deg;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    margin: -51px 0 0 100px;
+    border-radius: 100px 0;
+    left: 53%;
+    top: 32%;
+}

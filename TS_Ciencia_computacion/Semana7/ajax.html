@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Intercambio de informacion y ajax</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            $("button").click(function(){
+                $.ajax({
+                    // En data puedes utilizar un objeto JSON, un array o un query string
+                    data: {"nombre" : "Juan", "correo" : "juan@correo.com"},
+                    //Cambiar a type: POST si necesario
+                    type: "GET",
+                    // Formato de datos que se espera en la respuesta
+                    dataType: "json",
+                    // URL a la que se enviará la solicitud Ajax
+                    url: "ejemplo8.php",
+                })
+                .done(function( data, textStatus, jqXHR ) { //Se ejecuta cuando la solicitud Ajax ha concluido satisfactoriamente
+                    console.log(data);
+                })
+                
+                .fail(function( jqXHR, textStatus, errorThrown ) { //Se ejecuta si la solicitud Ajax falla
+                    console.log("La solicitud a fallado: " +  textStatus);
+                });
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+    <h2>PHP-jQuery-json</h2>
+
+    <button>Click para realizar la peticion</button>
+    
+</body>
+</html>

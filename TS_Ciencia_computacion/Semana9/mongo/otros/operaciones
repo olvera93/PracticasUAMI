@@ -1,0 +1,45 @@
+
+
+Verificar si el demonio de mongo está ejecutándose
+
+sudo systemctl status mongod
+
+Sino se ejecuta, 
+
+sudo systemctl start mongod
+
+Ingresar a mongo
+
+mongo
+
+Salir de mongo
+
+quit();
+
+Crear una BD en mongo
+
+use georref;
+
+Crear una colección den mongo
+
+db.createCollection("semaforos");
+
+Listar las colecciones
+
+show collections;
+
+Listar todos los documentos de una colección
+
+db.getCollection('semaforos').find({})
+
+Listar todos los elementos de una colección donde alcaldía es Iztapalapa
+
+db.semaforos.find( { 'alcaldia': { $eq: "Iztapalapa" } } )
+
+Eliminar una colección
+
+db.semaforos.remove({})
+
+Insertar un documento json a una base de datos y colección en mongo
+
+mongoimport  --jsonArray --db georref --collection semaforos --file semaforos_miguelhidalgo.json

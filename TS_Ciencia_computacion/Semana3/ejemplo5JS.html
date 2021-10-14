@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejemplo 5</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            
+            function getRomano() {
+                romano = "";
+                str = document.getElementById("input").value;
+                valor = parseInt(str);
+
+                if (valor < 0) 
+                    alert("El valor no puede ser negativo");
+                 
+                else 
+                    if (valor > 100) 
+                        alert("El valor debe estar entre 1 y 100");
+                    else {
+
+                        c = Math.floor(valor / 10);
+                        r = valor % 10;
+
+                        switch (c) {
+
+                            case 0: break;
+
+                            case 1: 
+                                romano = "X"; 
+                                break;
+
+                            case 2:
+                                romano = "XX";
+                                break;
+
+                            case 3:
+                                romano = "XXX";
+                                break;
+
+                            case 4:
+                                romano = "XL";
+                                break;
+                            
+                            case 5:
+                                romano = "L";
+                                break;
+                            
+                            case 6:
+                                romano = "LX";
+                                break;
+                            
+                            case 7:
+                                romano = "LXX";
+                                break;
+
+                            case 8:
+                                romano = "LXXX";
+                                break;
+                            
+                            case 9:
+                                romano = "XC";
+                                break;
+                            
+                            default:
+                                romano = "C";
+                                break;
+                            
+                        }
+
+                        switch (r) {
+                            case 0: break;
+
+                            case 1:
+                                romano = romano + "I";
+                                break;
+
+                            case 2:
+                                romano = romano + "II";
+                                break;
+
+                            case 3:
+                                romano = romano + "III";
+                                break;
+
+                            case 4:
+                                romano = romano + "IV";
+                                break;
+                            
+                            case 5:
+                                romano = romano + "V";
+                                break;
+
+                            case 6:
+                                romano = romano + "VI";
+                                break;
+
+                            case 7:
+                                romano = romano + "VII";
+                                break;
+
+                            case 8:
+                                romano = romano + "VIII";
+                                break;
+
+                            default:
+                                romano = romano + "IX";
+                                break;
+
+                        }
+                        console.log(romano);
+                    }
+            }
+
+
+        </script>
+
+        <form action="javascript:getRomano();">
+
+            Ingresa un numero: <input type="number" name="cajas" placeholder="p.e. 45" id="input" required><br><br>
+            <input type="submit" value="Enviar">
+        </form>
+
+    </body>
+</html>

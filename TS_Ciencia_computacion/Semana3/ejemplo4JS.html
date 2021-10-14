@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejemplo 3</title>
+        <meta charset="UTF-8">
+        </head>
+
+        <body>
+            <p></p>
+
+            <script>
+                
+                
+                x = prompt("Ingrese un numero");
+                n = prompt("Ingrese un numero");
+                r = aproximacion(x, n);
+                alert(r);
+
+            
+                function factorial(n) {
+                    (n == 0 || n == 1) && (fact = 1);
+
+                    (n > 1) && (fact = n * factorial(n - 1));
+
+                    return fact;
+                }
+
+                
+                function potencial(base, exponente) {
+                    (exponente == 0) && (pot = 1);
+                    (exponente == 1) && (pot = base);
+                    (exponente > 1) && (pot = base * potencial(base, exponente - 1));
+                    return pot;
+
+                }
+
+                function aproximacion(x, n) {
+                    (n == 0) && (aprox = 1);
+
+                    (n > 0) && (aprox = potencial(x, n)/factorial(n) + aproximacion(x, n - 1)); 
+                    return aprox;
+                    
+                }
+
+            
+      
+            </script>
+
+        </body>
+            
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Practica 3</title>
+        <link rel="stylesheet" type="text/css" href="css/styleReloj.css">
+    </head>
+
+    <body>
+        <img src="curve.png" class="wave">
+
+        <div class="contenedor-principal">
+
+            
+                <div class="contenedor">
+
+                    <div class="fecha">
+
+                        <div id="dia"></div>
+                        <div id="diaNumero"></div>
+                        <div id="mes"></div>
+                        <div id="anio"></div>
+                    </div>
+                </div>
+    
+                <div class="contenedor2">
+                    <div class="hora">
+                        <div class="tiempo"><div id="hora"></div><span>Hora</span></div>
+                        <div class="tiempo"><div id="minutos"></div><span>Minutos</span></div>
+                        <div class="tiempo"><div id="segundos"></div><span>Segundos</span></div>
+                    </div>
+                </div>
+        </div>
+
+
+        <script>
+
+
+
+            function obtenerTiempo() {
+
+                var today = new Date(); // Creamos un objeto de la clase Date para obtener el día, mes y año actuales.
+                var h = today.getHours(); // Obtenemos el valor de la hora actual.
+                var m = today.getMinutes(); // Obtenemos el valor de los minutos actuales.
+                var s = today.getSeconds(); // Obtenemos el valor de los segundos actuales.
+                var d = today.getDate(); // Obtenemos el valor del día actual.
+                var dia = today.getDay(); // Obtenemos el valor del día de la semana actual.
+                var mes = today.getMonth(); // Obtenemos el valor del mes actual.
+                var anio = today.getFullYear(); // Obtenemos el valor del año actual.
+
+                var semana = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"]; // Array con los nombres de los días de la semana.
+                var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]; // Array con los nombres de los meses.
+            
+
+
+                var tiempo = "" // Declaramos una variable para almacenar el tiempo.
+
+                if (h >= 12) { // Si la hora actual es mayor o igual a 12 horas
+                    h = h - 12; // Restamos 12 horas a la hora actual.
+                    tiempo = "p.m." // Almacenamos el texto "P.M." en la variable.
+                } else { // Si la hora actual es menor a 12 horas
+                    tiempo = "a.m." // Almacenamos el texto "A.M." en la variable.
+                }
+
+                if (h == 0) { // Si la hora actual es igual a 0
+                    h = 12; // Asignamos el valor de 12 a la hora actual.
+                }
+
+                if (h < 10) { // Si la hora actual es menor a 10
+                    h = "0" + h; // Le agregamos un 0 delante de la hora actual.
+                }
+
+                if (m < 10) { // Si los minutos actuales son menores a 10
+                    m = "0" + m; // Le agregamos un 0 delante de los minutos actuales.
+                }
+
+                if (s < 10) { // Si los segundos actuales son menores a 10
+                    s = "0" + s; // Le agregamos un 0 delante de los segundos actuales.
+                }
+
+                document.getElementById("dia").innerHTML = semana[dia]; // Almacenamos el valor del día en la variable.
+                document.getElementById("diaNumero").innerHTML = d + " de"; // Almacenamos el valor del día actual en la variable.
+                document.getElementById("mes").innerHTML = meses[mes] + " del"; // Almacenamos el valor del mes en la variable.
+                document.getElementById("anio").innerHTML = anio; // Almacenamos el valor del año en la variable.
+                document.getElementById("hora").innerHTML = h; // Almacenamos el valor de la hora actual en el elemento html con el id "hora".
+                document.getElementById("minutos").innerHTML = m; // Almacenamos el valor de los minutos actuales en el elemento html con el id "minutos".
+                document.getElementById("segundos").innerHTML = s + " " +tiempo; // Almacenamos el valor de los segundos actuales en el elemento html con el id "segundos".
+            }
+
+
+            setInterval(obtenerTiempo, 1000); // Llamamos a la función "obtenerTiempo" cada 1000 milisegundos.
+
+        </script>
+    </body>
+
+</html>

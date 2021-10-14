@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejemplo 11 JSDOM</title>
+    </head>
+
+    <body>
+        <p id="intro">Hola Mundo!</p>
+        <p>El DOM es muy util</p>
+        <p>Este ejemplo demuestra el metodo <b>getElementByTagName</b></p>
+        
+        <p id="demo"></p>
+
+        <script>
+
+            var x = document.getElementsByTagName("p");
+
+            document.getElementById("demo").innerHTML = "El primer parrafo (indice 0 ) es " + x[0].innerHTML;
+
+        </script>
+
+    </body>
+</html>

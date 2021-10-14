@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Storage</title>
+    
+</head>
+<body>
+
+    <div id="result"></div>
+
+    <script>
+        /* Verifica soporte*/
+        function almacenaDatos() {
+
+            if(typeof(Storage) !== undefined) {
+                /* Almacenamiento Local */
+                if( sessionStorage.getItem("apellido") == undefined) {
+                    apellido = prompt("Ingrese su apellido: ','");
+                    sessionStorage.setItem("apellido", apellido);
+                    document.getElementById("result").innerHTML = "Bienvenido: "+sessionStorage.getItem("apellido");
+                } else {
+                    console.log("Apellido = " + sessionStorage.getItem("apellido"));
+                    alert("El nombre fue: "+sessionStorage.getItem("apellido"));
+            }
+
+            document.getElementById("result").innerHTML = "Bienvenido: " + sessionStorage.getItem("apellido");
+            if(localStorage.getItem("apellido") == undefined) {
+                console.log("No existe apellido");
+                localStorage.setItem(apellido, '0');
+                texto=document.getElementById("result").innerHTML;
+
+        }
+    </script>
+    
+
+</body>
+</html>
